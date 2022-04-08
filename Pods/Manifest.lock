@@ -1,0 +1,28 @@
+PODS:
+  - lottie-ios (2.5.2)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - Shakuro.CommonTypes (1.1.1)
+
+DEPENDENCIES:
+  - lottie-ios (= 2.5.2)
+  - R.swift (= 5.2.2)
+  - Shakuro.CommonTypes
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - R.swift
+    - R.swift.Library
+    - Shakuro.CommonTypes
+
+SPEC CHECKSUMS:
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  Shakuro.CommonTypes: 8b15b334da1dfba894237940f890f7519d33ba3e
+
+PODFILE CHECKSUM: 271a81dfe0dffce53c0f12376a3c63daf42516a8
+
+COCOAPODS: 1.10.1
