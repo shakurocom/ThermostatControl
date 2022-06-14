@@ -280,6 +280,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `ThermostatViewController`.
+    static let thermostatViewController = _R.nib._ThermostatViewController()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ThermostatViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.thermostatViewController) instead")
+    static func thermostatViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.thermostatViewController)
+    }
+    #endif
+
+    static func thermostatViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.thermostatViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -296,9 +316,44 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _ThermostatViewController.validate()
+    }
+
+    struct _ThermostatViewController: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "ThermostatViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "clock", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'clock' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "cooler", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cooler' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "power", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'power' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "snow", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'snow' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "sun", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'sun' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "water", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'water' is used in nib 'ThermostatViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
