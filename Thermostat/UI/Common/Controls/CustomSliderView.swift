@@ -5,7 +5,6 @@
 
 import Foundation
 import UIKit
-import Rswift
 
 class CustomSliderView: UIView {
 
@@ -17,12 +16,12 @@ class CustomSliderView: UIView {
     var leftRadius: CGFloat = 1.0
     var rightRadius: CGFloat = 8.0
 
-    var minimumTrackColor: UIColor? = R.color.redThermostat() {
+    var minimumTrackColor: UIColor? = UIColor(named: "RedThermostat") {
         didSet {
             updateColors()
         }
     }
-    var maximumTrackColor: UIColor? = R.color.darkThermostat() {
+    var maximumTrackColor: UIColor? = UIColor(named: "DarkThermostat") {
         didSet {
             updateColors()
         }

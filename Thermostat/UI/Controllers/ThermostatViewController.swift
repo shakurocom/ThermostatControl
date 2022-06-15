@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Rswift
 
 protocol TemperatureInfo {
     var value: CGFloat { get }
@@ -74,9 +73,9 @@ public class ThermostatViewController: UIViewController {
         powerPressGestureRecognizer.minimumPressDuration = TimeInterval.ulpOfOne
         powerPressGestureRecognizer.addTarget(self, action: #selector(handlePowerPress(_:)))
 
-        let selectedImage: UIImage? = R.image.buttonSelected()
-        let normalImage: UIImage? = R.image.normalButton()
-        let normalTint = R.color.darkThermostat()
+        let selectedImage: UIImage? = UIImage(named: "buttonSelected")
+        let normalImage: UIImage? = UIImage(named: "normalButton")
+        let normalTint = UIColor(named: "DarkThermostat")
         let selectedTint = UIColor.white
         [heatingButton, wateringButton, coolingButton].forEach { (button: TintAlphaButton) in
             button.isExclusiveTouch = true
@@ -93,9 +92,9 @@ public class ThermostatViewController: UIViewController {
             button.selectedTintColor = selectedTint
             button.normalTintColor = normalTint
         }
-        heatingButton.setImage(R.image.sun(), for: .normal)
-        wateringButton.setImage(R.image.water(), for: .normal)
-        coolingButton.setImage(R.image.snow(), for: .normal)
+        heatingButton.setImage(UIImage(named: "sun"), for: .normal)
+        wateringButton.setImage(UIImage(named: "water"), for: .normal)
+        coolingButton.setImage(UIImage(named: "snow"), for: .normal)
 
         // TODO: Initital value
         let selectedValue: CGFloat

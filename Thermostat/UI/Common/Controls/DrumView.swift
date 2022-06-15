@@ -3,7 +3,6 @@
 //  ShakuroApp
 
 import UIKit
-import Rswift
 import Shakuro_CommonTypes
 
 class DrumView: UIView {
@@ -84,7 +83,7 @@ private extension DrumView {
         spinnerImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         spinnerImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
-        spinnerImageView.image = R.image.spinner()
+        spinnerImageView.image = UIImage(named: "spinner")
         spinnerImageView.layoutIfNeeded()
 
         circleGestureRecognizer = CircleGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))

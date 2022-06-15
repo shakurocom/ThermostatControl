@@ -1,5 +1,4 @@
 import UIKit
-import Rswift
 
 final class CurrentValueIndicatorView: UIView {
 
@@ -8,7 +7,7 @@ final class CurrentValueIndicatorView: UIView {
     }
 
     private let label: UILabel = UILabel()
-    private let bgImageView: UIImageView = UIImageView(image: R.image.humidistatShadow())
+    private let bgImageView: UIImageView = UIImageView(image: UIImage(named: "HumidistatShadow"))
     private var gradient: UIImage?
     private var lastProgress: CGFloat = 0
 
