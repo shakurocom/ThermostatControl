@@ -32,11 +32,13 @@
 		60C24342280033A300D40E59 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C24341280033A300D40E59 /* CGPoint+Distance.swift */; };
 		60C243442800358800D40E59 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C243432800358800D40E59 /* R.generated.swift */; };
 		6BE0DA362858C04000091C76 /* ThermostatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0DA352858C04000091C76 /* ThermostatViewController.xib */; };
-		B8294FC4F04F703DB2A37E81 /* Pods_ThermostatControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D9D4EC798BEC2048F6F773 /* Pods_ThermostatControl.framework */; };
+		810E408C7310AD677C035CAA /* Pods_Thermostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77775C584E40D79E668D84EB /* Pods_Thermostat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60C2430228001D4100D40E59 /* ThermostatControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThermostatControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0822A9A5DA78609AB951B6 /* Pods-Thermostat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thermostat.release.xcconfig"; path = "Target Support Files/Pods-Thermostat/Pods-Thermostat.release.xcconfig"; sourceTree = "<group>"; };
+		4030EA7EAECAE78BF57B5C76 /* Pods-Thermostat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thermostat.debug.xcconfig"; path = "Target Support Files/Pods-Thermostat/Pods-Thermostat.debug.xcconfig"; sourceTree = "<group>"; };
+		60C2430228001D4100D40E59 /* Thermostat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thermostat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C2430528001D4100D40E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60C2430728001D4100D40E59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		60C2430E28001D4500D40E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,9 +65,7 @@
 		60C24341280033A300D40E59 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		60C243432800358800D40E59 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		6BE0DA352858C04000091C76 /* ThermostatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThermostatViewController.xib; sourceTree = "<group>"; };
-		B37E7521756488CD6C143034 /* Pods-ThermostatControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThermostatControl.debug.xcconfig"; path = "Target Support Files/Pods-ThermostatControl/Pods-ThermostatControl.debug.xcconfig"; sourceTree = "<group>"; };
-		C1D9D4EC798BEC2048F6F773 /* Pods_ThermostatControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThermostatControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C670F86A43B8ECAB742720D1 /* Pods-ThermostatControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThermostatControl.release.xcconfig"; path = "Target Support Files/Pods-ThermostatControl/Pods-ThermostatControl.release.xcconfig"; sourceTree = "<group>"; };
+		77775C584E40D79E668D84EB /* Pods_Thermostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thermostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8294FC4F04F703DB2A37E81 /* Pods_ThermostatControl.framework in Frameworks */,
+				810E408C7310AD677C035CAA /* Pods_Thermostat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,22 +83,22 @@
 		60C242F928001D4100D40E59 = {
 			isa = PBXGroup;
 			children = (
-				60C2430428001D4100D40E59 /* ThermostatControl */,
+				60C2430428001D4100D40E59 /* Thermostat */,
 				60C2430328001D4100D40E59 /* Products */,
 				787A77D6FC4D7FA2BAEE98DF /* Pods */,
-				8488C5D18295F2D954251335 /* Frameworks */,
+				F6BCC7C61E700A732A427771 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		60C2430328001D4100D40E59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60C2430228001D4100D40E59 /* ThermostatControl.app */,
+				60C2430228001D4100D40E59 /* Thermostat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60C2430428001D4100D40E59 /* ThermostatControl */ = {
+		60C2430428001D4100D40E59 /* Thermostat */ = {
 			isa = PBXGroup;
 			children = (
 				60C243432800358800D40E59 /* R.generated.swift */,
@@ -121,7 +121,7 @@
 				60C2431028001D4500D40E59 /* LaunchScreen.storyboard */,
 				60C2431328001D4500D40E59 /* Info.plist */,
 			);
-			path = ThermostatControl;
+			path = Thermostat;
 			sourceTree = "<group>";
 		};
 		60C243272800211900D40E59 /* SliderView */ = {
@@ -142,16 +142,16 @@
 		787A77D6FC4D7FA2BAEE98DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B37E7521756488CD6C143034 /* Pods-ThermostatControl.debug.xcconfig */,
-				C670F86A43B8ECAB742720D1 /* Pods-ThermostatControl.release.xcconfig */,
+				4030EA7EAECAE78BF57B5C76 /* Pods-Thermostat.debug.xcconfig */,
+				0B0822A9A5DA78609AB951B6 /* Pods-Thermostat.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8488C5D18295F2D954251335 /* Frameworks */ = {
+		F6BCC7C61E700A732A427771 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1D9D4EC798BEC2048F6F773 /* Pods_ThermostatControl.framework */,
+				77775C584E40D79E668D84EB /* Pods_Thermostat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,24 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60C2430128001D4100D40E59 /* ThermostatControl */ = {
+		60C2430128001D4100D40E59 /* Thermostat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60C2431628001D4500D40E59 /* Build configuration list for PBXNativeTarget "ThermostatControl" */;
+			buildConfigurationList = 60C2431628001D4500D40E59 /* Build configuration list for PBXNativeTarget "Thermostat" */;
 			buildPhases = (
-				7859DE40BF66471C64C5FA2B /* [CP] Check Pods Manifest.lock */,
+				FF196A664C9F74AED1E82D0C /* [CP] Check Pods Manifest.lock */,
 				60C243382800296400D40E59 /* R.swift script */,
 				60C242FE28001D4100D40E59 /* Sources */,
 				60C242FF28001D4100D40E59 /* Frameworks */,
 				60C2430028001D4100D40E59 /* Resources */,
-				9B8B072F4EB5AE4E35831FE0 /* [CP] Embed Pods Frameworks */,
+				3ED23D39F4CA224BEF530AB9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ThermostatControl;
+			name = Thermostat;
 			productName = ThermostatControl;
-			productReference = 60C2430228001D4100D40E59 /* ThermostatControl.app */;
+			productReference = 60C2430228001D4100D40E59 /* Thermostat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 60C242FD28001D4100D40E59 /* Build configuration list for PBXProject "ThermostatControl" */;
+			buildConfigurationList = 60C242FD28001D4100D40E59 /* Build configuration list for PBXProject "Thermostat" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,7 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60C2430128001D4100D40E59 /* ThermostatControl */,
+				60C2430128001D4100D40E59 /* Thermostat */,
 			);
 		};
 /* End PBXProject section */
@@ -227,6 +227,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3ED23D39F4CA224BEF530AB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thermostat/Pods-Thermostat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thermostat/Pods-Thermostat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thermostat/Pods-Thermostat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		60C243382800296400D40E59 /* R.swift script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,13 +258,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/ThermostatControl/R.generated.swift,
+				$SRCROOT/Thermostat/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ThermostatControl/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Thermostat/R.generated.swift\"\n";
 		};
-		7859DE40BF66471C64C5FA2B /* [CP] Check Pods Manifest.lock */ = {
+		FF196A664C9F74AED1E82D0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,28 +279,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ThermostatControl-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Thermostat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B8B072F4EB5AE4E35831FE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThermostatControl/Pods-ThermostatControl-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThermostatControl/Pods-ThermostatControl-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThermostatControl/Pods-ThermostatControl-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -447,7 +447,7 @@
 		};
 		60C2431728001D4500D40E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B37E7521756488CD6C143034 /* Pods-ThermostatControl.debug.xcconfig */;
+			baseConfigurationReference = 4030EA7EAECAE78BF57B5C76 /* Pods-Thermostat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,7 +455,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThermostatControl/Info.plist;
+				INFOPLIST_FILE = Thermostat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -466,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shakuro.ThermostatControl;
+				PRODUCT_BUNDLE_IDENTIFIER = shakuro.Thermostat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -476,7 +476,7 @@
 		};
 		60C2431828001D4500D40E59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C670F86A43B8ECAB742720D1 /* Pods-ThermostatControl.release.xcconfig */;
+			baseConfigurationReference = 0B0822A9A5DA78609AB951B6 /* Pods-Thermostat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -484,7 +484,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThermostatControl/Info.plist;
+				INFOPLIST_FILE = Thermostat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -495,7 +495,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shakuro.ThermostatControl;
+				PRODUCT_BUNDLE_IDENTIFIER = shakuro.Thermostat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -506,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60C242FD28001D4100D40E59 /* Build configuration list for PBXProject "ThermostatControl" */ = {
+		60C242FD28001D4100D40E59 /* Build configuration list for PBXProject "Thermostat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60C2431428001D4500D40E59 /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60C2431628001D4500D40E59 /* Build configuration list for PBXNativeTarget "ThermostatControl" */ = {
+		60C2431628001D4500D40E59 /* Build configuration list for PBXNativeTarget "Thermostat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60C2431728001D4500D40E59 /* Debug */,

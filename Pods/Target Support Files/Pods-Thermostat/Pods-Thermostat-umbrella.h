@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ThermostatControlVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ThermostatControlVersionString[];
+FOUNDATION_EXPORT double Pods_ThermostatVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ThermostatVersionString[];
 
