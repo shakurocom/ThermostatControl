@@ -31,6 +31,7 @@
 		60C24340280030BC00D40E59 /* StateAlphaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2433F280030BC00D40E59 /* StateAlphaButton.swift */; };
 		60C24342280033A300D40E59 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C24341280033A300D40E59 /* CGPoint+Distance.swift */; };
 		60C243442800358800D40E59 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C243432800358800D40E59 /* R.generated.swift */; };
+		6B6778EB2859C25300391D8F /* ThermostatAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */; };
 		6BE0DA362858C04000091C76 /* ThermostatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0DA352858C04000091C76 /* ThermostatViewController.xib */; };
 		810E408C7310AD677C035CAA /* Pods_Thermostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77775C584E40D79E668D84EB /* Pods_Thermostat.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		60C2433F280030BC00D40E59 /* StateAlphaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateAlphaButton.swift; sourceTree = "<group>"; };
 		60C24341280033A300D40E59 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		60C243432800358800D40E59 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ThermostatAssets.xcassets; sourceTree = "<group>"; };
 		6BE0DA352858C04000091C76 /* ThermostatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThermostatViewController.xib; sourceTree = "<group>"; };
 		77775C584E40D79E668D84EB /* Pods_Thermostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thermostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,25 +103,8 @@
 		60C2430428001D4100D40E59 /* Thermostat */ = {
 			isa = PBXGroup;
 			children = (
-				60C243432800358800D40E59 /* R.generated.swift */,
-				60C243272800211900D40E59 /* SliderView */,
-				60C2430528001D4100D40E59 /* AppDelegate.swift */,
-				60C2430728001D4100D40E59 /* SceneDelegate.swift */,
-				60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */,
-				60C2431D28001E5200D40E59 /* CustomSliderView.swift */,
-				60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */,
-				60C2431C28001E5200D40E59 /* DrumView.swift */,
-				60C2431A28001E5200D40E59 /* Main.storyboard */,
-				6BE0DA352858C04000091C76 /* ThermostatViewController.xib */,
-				60C2431928001E5200D40E59 /* ThermostatViewController.swift */,
-				60C2431F28001E5300D40E59 /* UIView+Rotate.swift */,
-				60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */,
-				60C2433F280030BC00D40E59 /* StateAlphaButton.swift */,
-				60C2433B28002F4C00D40E59 /* TintAlphaButton.swift */,
-				60C24341280033A300D40E59 /* CGPoint+Distance.swift */,
-				60C2430E28001D4500D40E59 /* Assets.xcassets */,
-				60C2431028001D4500D40E59 /* LaunchScreen.storyboard */,
-				60C2431328001D4500D40E59 /* Info.plist */,
+				6B6778E92859C0D700391D8F /* Application */,
+				6B6778E32859BE7300391D8F /* Resources */,
 			);
 			path = Thermostat;
 			sourceTree = "<group>";
@@ -137,6 +122,88 @@
 				60C2432F2800211900D40E59 /* TemperatureUnit.swift */,
 			);
 			path = SliderView;
+			sourceTree = "<group>";
+		};
+		6B6778E32859BE7300391D8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60C2431328001D4500D40E59 /* Info.plist */,
+				60C2430E28001D4500D40E59 /* Assets.xcassets */,
+				6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */,
+				6B6778EC2859C4A100391D8F /* UI */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B6778E42859BF4400391D8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6B6778E52859BF8F00391D8F /* Common */,
+				6B6778E82859C05D00391D8F /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6B6778E52859BF8F00391D8F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */,
+				60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */,
+				60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */,
+				6B6778E72859C01800391D8F /* Controls */,
+				6B6778E62859BFAD00391D8F /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6B6778E62859BFAD00391D8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60C24341280033A300D40E59 /* CGPoint+Distance.swift */,
+				60C2431F28001E5300D40E59 /* UIView+Rotate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B6778E72859C01800391D8F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				60C2431D28001E5200D40E59 /* CustomSliderView.swift */,
+				60C2431C28001E5200D40E59 /* DrumView.swift */,
+				60C2433F280030BC00D40E59 /* StateAlphaButton.swift */,
+				60C2433B28002F4C00D40E59 /* TintAlphaButton.swift */,
+				60C243272800211900D40E59 /* SliderView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		6B6778E82859C05D00391D8F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				60C2431928001E5200D40E59 /* ThermostatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6B6778E92859C0D700391D8F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				60C2430528001D4100D40E59 /* AppDelegate.swift */,
+				60C243432800358800D40E59 /* R.generated.swift */,
+				60C2430728001D4100D40E59 /* SceneDelegate.swift */,
+				6B6778E42859BF4400391D8F /* UI */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		6B6778EC2859C4A100391D8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				60C2431A28001E5200D40E59 /* Main.storyboard */,
+				6BE0DA352858C04000091C76 /* ThermostatViewController.xib */,
+				60C2431028001D4500D40E59 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		787A77D6FC4D7FA2BAEE98DF /* Pods */ = {
@@ -218,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C2431228001D4500D40E59 /* LaunchScreen.storyboard in Resources */,
+				6B6778EB2859C25300391D8F /* ThermostatAssets.xcassets in Resources */,
 				6BE0DA362858C04000091C76 /* ThermostatViewController.xib in Resources */,
 				60C2430F28001D4500D40E59 /* Assets.xcassets in Resources */,
 				60C2432128001E5300D40E59 /* Main.storyboard in Resources */,
@@ -455,7 +523,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thermostat/Info.plist;
+				INFOPLIST_FILE = Thermostat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,7 +552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thermostat/Info.plist;
+				INFOPLIST_FILE = Thermostat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
