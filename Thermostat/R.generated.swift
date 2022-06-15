@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -149,6 +150,45 @@ struct R: Rswift.Validatable {
       return UIKit.UIColor(resource: R.color.redThermostat, compatibleWith: traitCollection)
     }
     #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.file` struct is generated, and contains static references to 2 files.
+  struct file {
+    /// Resource file `Montserrat-Bold.ttf`.
+    static let montserratBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Montserrat-Bold", pathExtension: "ttf")
+    /// Resource file `OFL.txt`.
+    static let oflTxt = Rswift.FileResource(bundle: R.hostingBundle, name: "OFL", pathExtension: "txt")
+
+    /// `bundle.url(forResource: "Montserrat-Bold", withExtension: "ttf")`
+    static func montserratBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.montserratBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "OFL", withExtension: "txt")`
+    static func oflTxt(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.oflTxt
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 1 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Montserrat-Bold`.
+    static let montserratBold = Rswift.FontResource(fontName: "Montserrat-Bold")
+
+    /// `UIFont(name: "Montserrat-Bold", size: ...)`
+    static func montserratBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: montserratBold, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.montserratBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Montserrat-Bold' could not be loaded, is 'Montserrat-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
 
     fileprivate init() {}
   }
