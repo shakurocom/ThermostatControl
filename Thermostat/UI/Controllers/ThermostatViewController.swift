@@ -17,6 +17,13 @@ protocol TemperatureInfo {
 
 class ThermostatViewController: UIViewController {
 
+    enum Constant {
+        static let screenHeight: CGFloat = 926.0
+        static let screenWidtht: CGFloat = 428.0
+    }
+
+    @IBOutlet private var containerView: UIView!
+
     @IBOutlet private var drumView: DrumView!
 
     @IBOutlet private var temperatureUnitTitleLabel: UILabel!
@@ -120,6 +127,15 @@ class ThermostatViewController: UIViewController {
         }
 
         selectModeButton(heatingButton)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let currentViewSize: CGSize = view.bounds.size
+        if Constant.screenHeight > currentViewSize.height || Constant.screenWidtht > currentViewSize.width {
+            let scale = min(currentViewSize.height / Constant.screenHeight, currentViewSize.width / Constant.screenWidtht)
+            containerView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -14,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThermostatViewController" customModule="Thermostat" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="cGU-0i-oEN" id="Vdf-bc-cJD"/>
                 <outlet property="coolerImage" destination="1KX-fI-qW2" id="ih7-K0-ucC"/>
                 <outlet property="coolingButton" destination="3TO-ga-zUB" id="8Zj-rh-k3c"/>
                 <outlet property="customSliderView" destination="4gI-h3-8g7" id="byx-hf-FFw"/>
@@ -40,24 +41,27 @@
                     <subviews>
                         <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-Xt-fCC">
                             <rect key="frame" x="20.333333333333336" y="55" width="51.000000000000007" height="31"/>
+                            <connections>
+                                <action selector="unitSwitchValueChanged:" destination="-1" eventType="valueChanged" id="zAB-en-egA"/>
+                            </connections>
                         </switch>
                         <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-4W-9sm" userLabel="TemperatureView">
-                            <rect key="frame" x="32.333333333333343" y="224" width="180" height="135.66666666666663"/>
+                            <rect key="frame" x="32.333333333333343" y="224" width="180" height="141"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="temperature, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-Pf-ccZ" userLabel="Temperature Title Label">
-                                    <rect key="frame" x="0.0" y="0.0" width="96" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="115" height="19"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                     <color key="textColor" red="0.92156862750000001" green="0.96862745100000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqG-f9-3vJ" userLabel="Temperature Unit Title Label">
-                                    <rect key="frame" x="96" y="0.0" width="16" height="19"/>
+                                    <rect key="frame" x="114.99999999999999" y="0.0" width="17.000000000000014" height="19"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                     <color key="textColor" red="0.92156862750000001" green="0.96862745100000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="72" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="3xI-Wb-zJK" userLabel="Temperature Value Label">
-                                    <rect key="frame" x="0.0" y="19.000000000000007" width="180" height="116.66666666666669"/>
+                                    <rect key="frame" x="0.0" y="19" width="180" height="122"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="100"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -78,7 +82,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" horizontalHuggingPriority="253" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ago-BE-dwn" userLabel="TapAreaView" customClass="DrumView" customModule="Thermostat" customModuleProvider="target">
-                            <rect key="frame" x="235.33333333333326" y="-108.33333333333331" width="860" height="860.33333333333326"/>
+                            <rect key="frame" x="235.33333333333326" y="-105.66666666666669" width="860" height="860.33333333333348"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" priority="900" constant="860" id="17x-WO-IwX"/>
@@ -86,7 +90,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOb-mv-haL">
-                            <rect key="frame" x="32.333333333333343" y="434.66666666666669" width="188" height="21"/>
+                            <rect key="frame" x="32.333333333333343" y="440" width="188" height="21"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-KH-t3w">
                                     <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
@@ -110,7 +114,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-lm-4ad">
-                            <rect key="frame" x="32.333333333333343" y="487.66666666666669" width="176" height="48.000000000000057"/>
+                            <rect key="frame" x="32.333333333333343" y="493" width="176" height="48"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-DW-sOa" userLabel="sun" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -120,6 +124,9 @@
                                         <constraint firstAttribute="height" constant="48" id="kE7-5H-54T"/>
                                     </constraints>
                                     <state key="normal" image="sun"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="x7i-C8-IQ2"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs9-xV-ojH" userLabel="water" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
                                     <rect key="frame" x="64" y="0.0" width="48" height="48"/>
@@ -128,6 +135,9 @@
                                         <constraint firstAttribute="width" constant="48" id="nc3-KY-WjY"/>
                                     </constraints>
                                     <state key="normal" image="water"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="qr1-jk-ibq"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TO-ga-zUB" userLabel="snow" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
                                     <rect key="frame" x="128" y="0.0" width="48" height="48"/>
@@ -136,6 +146,9 @@
                                         <constraint firstAttribute="height" constant="48" id="jzE-Lz-4wo"/>
                                     </constraints>
                                     <state key="normal" image="snow"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="Fjz-Zb-0R7"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,24 +167,24 @@
                             </constraints>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooler" translatesAutoresizingMaskIntoConstraints="NO" id="1KX-fI-qW2">
-                            <rect key="frame" x="32.333333333333336" y="567.66666666666663" width="16" height="16"/>
+                            <rect key="frame" x="32.333333333333336" y="573" width="16" height="16"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-h3-8g7" customClass="CustomSliderView" customModule="Thermostat" customModuleProvider="target">
-                            <rect key="frame" x="64.333333333333314" y="560.66666666666663" width="339" height="30"/>
+                            <rect key="frame" x="64.333333333333314" y="566" width="339" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="UxK-PS-mBM"/>
                             </constraints>
                         </view>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gMO-Or-GOf" userLabel="The Slider">
-                            <rect key="frame" x="54.333333333333314" y="560.66666666666663" width="359" height="31"/>
+                            <rect key="frame" x="54.333333333333314" y="566" width="359" height="31"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </slider>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-wm-oh7" userLabel="Power Container View">
-                            <rect key="frame" x="131.33333333333334" y="630.66666666666663" width="173.00000000000003" height="24"/>
+                            <rect key="frame" x="131.33333333333334" y="636" width="173.00000000000003" height="24"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power" translatesAutoresizingMaskIntoConstraints="NO" id="duY-1i-Whl">
                                     <rect key="frame" x="0.0" y="0.0" width="22" height="24"/>
