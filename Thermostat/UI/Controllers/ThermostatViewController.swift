@@ -15,7 +15,7 @@ protocol TemperatureInfo {
     var unit: TemperatureUnit { get }
 }
 
-class ThermostatViewController: UIViewController {
+public class ThermostatViewController: UIViewController {
 
     enum Constant {
         static let screenHeight: CGFloat = 926.0
@@ -50,7 +50,7 @@ class ThermostatViewController: UIViewController {
     private var powerGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer() // Change .minimumPressDuration, to adjust delay for power button (0.5 by default)
     private var powerPressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer() // used to highlight power view
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(hex: "#1A1A1A") ?? .clear
@@ -129,7 +129,7 @@ class ThermostatViewController: UIViewController {
         selectModeButton(heatingButton)
     }
 
-    override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let currentViewSize: CGSize = view.bounds.size
         if Constant.screenHeight > currentViewSize.height || Constant.screenWidtht > currentViewSize.width {
@@ -138,11 +138,11 @@ class ThermostatViewController: UIViewController {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
@@ -246,7 +246,7 @@ class ThermostatViewController: UIViewController {
 
 extension ThermostatViewController: UIGestureRecognizerDelegate {
 
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return gestureRecognizer === powerGestureRecognizer || gestureRecognizer === powerPressGestureRecognizer
     }
 }
