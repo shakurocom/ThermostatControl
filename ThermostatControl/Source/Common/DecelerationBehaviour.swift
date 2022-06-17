@@ -8,10 +8,13 @@
 
 import UIKit
 
-final class DecelerationBehaviour {
+public final class DecelerationBehaviour {
 
-    var minVelocity: CGFloat = 0
-    var decelerationFactor: CGFloat = 0
+    /// Indicates the minimum speed before stopping
+    public var minVelocity: CGFloat = 0
+
+    /// Determines the deceleration factor. 0...1. 1 - will never stop.
+    public var decelerationFactor: CGFloat = 0
 
     private var timer: CADisplayLink?
     private var currentVelocity: CGFloat = 0
@@ -19,7 +22,12 @@ final class DecelerationBehaviour {
     private var completion: (() -> Void)?
     private var update: ((_ distance: CGFloat) -> Void)?
 
-    func decelerate(velocity: CGFloat,
+    ///  Used to slow down animation
+    /// - Parameters:
+    ///  - velocity: Initial velocity.
+    ///  - distance: Block to be called for decelaration distance.
+    ///  - completion: Block to be called  when minVelocity > velocity.
+    public func decelerate(velocity: CGFloat,
                     update: ((_ distance: CGFloat) -> Void)?,
                     completion: (() -> Void)? = nil) {
         stop()
@@ -29,7 +37,8 @@ final class DecelerationBehaviour {
         startTimer()
     }
 
-    func stop() {
+    /// Used to stop animation
+    public func stop() {
         update = nil
         stopTimer()
         currentVelocity = 0

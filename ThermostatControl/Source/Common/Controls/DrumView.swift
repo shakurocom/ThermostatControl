@@ -5,17 +5,19 @@
 import UIKit
 import Shakuro_CommonTypes
 
-class DrumView: UIView {
+public class DrumView: UIView {
 
-    private enum Constant {
-        static let maxValue: CGFloat = 1
-        static let minValue: CGFloat = 0
-        static let fullСycleAngle: CGFloat = .pi
-        static let minimumDecelerationVelocity: CGFloat = (.pi / 180) * 4
-        static let decelerationFactor: CGFloat = 0.92
+    public enum Constant {
+        public static let maxValue: CGFloat = 1
+        public static let minValue: CGFloat = 0
+        public static let fullСycleAngle: CGFloat = .pi
+        public static let minimumDecelerationVelocity: CGFloat = (.pi / 180) * 4
+        public static let decelerationFactor: CGFloat = 0.92
     }
 
-    var valueChanged: ((_ slider: DrumView) -> Void)?
+    /// Block to be called when the wheel is spinning.
+    public var valueChanged: ((_ slider: DrumView) -> Void)?
+
     private(set) var value: SliderValue = SliderValue.zero()
     private(set) var valueTransformer: SliderValueTransformer = DefaultSliderValueTransformer()
     private(set) var unit: TemperatureUnit = .fahrenheit
@@ -45,13 +47,20 @@ class DrumView: UIView {
         decelerationBehaviour.stop()
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         shadowLayer.frame = spinnerImageView.frame
         shadowLayer.shadowPath = UIBezierPath(roundedRect: spinnerImageView.bounds, cornerRadius: spinnerImageView.bounds.width * 0.5).cgPath
     }
 
-    func setValueTransformer(_ valueTransformer: SliderValueTransformer,
+    /// Sets transformerValue for current value
+    /// - Parameters:
+    ///  - valueTransformer: Actual value tranformer
+    ///  - selectedValue: Сurrently selected value
+    ///  - maxValue: Max value
+    ///  - minValue: Min value
+    ///  - fullСycleAngle: Angle from which changes are counted. Default - .pi
+    public func setValueTransformer(_ valueTransformer: SliderValueTransformer,
                              selectedValue: CGFloat,
                              maxValue: CGFloat,
                              minValue: CGFloat,
@@ -63,7 +72,9 @@ class DrumView: UIView {
         setValue(selectedValue)
     }
 
-    func setValue(_ newValue: CGFloat) {
+    /// Sets a value in the range from minimum to maximum
+    /// - parameter newValue: 
+    public func setValue(_ newValue: CGFloat) {
         value = valueTransformer.transformed(rawValue: min(max(newValue, minValue), maxValue))
     }
 

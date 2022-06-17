@@ -1,22 +1,23 @@
 import UIKit
 
-class StateAlphaButton: UIButton {
+public class StateAlphaButton: UIButton {
 
+    /// Alpha for selected state
     var selectedAlpha: CGFloat?
 
-    override var isHighlighted: Bool {
+    override public var isHighlighted: Bool {
         didSet {
             updateAlpha()
         }
     }
 
-    override var isEnabled: Bool {
+    override public var isEnabled: Bool {
         didSet {
             updateAlpha()
         }
     }
 
-    override var isSelected: Bool {
+    override public var isSelected: Bool {
         didSet {
             updateAlpha()
         }

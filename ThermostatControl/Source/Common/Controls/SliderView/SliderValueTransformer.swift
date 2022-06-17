@@ -1,6 +1,6 @@
 import UIKit
 
-struct SliderValue {
+public struct SliderValue {
     let raw: CGFloat
     let transformed: CGFloat
     let string: String
@@ -10,11 +10,11 @@ struct SliderValue {
     }
 }
 
-protocol SliderValueTransformer {
+public protocol SliderValueTransformer {
     func transformed(rawValue: CGFloat) -> SliderValue
 }
 
-class DefaultSliderValueTransformer: SliderValueTransformer {
+public class DefaultSliderValueTransformer: SliderValueTransformer {
 
     let suffix: String
     let prefix: String
@@ -42,7 +42,7 @@ class DefaultSliderValueTransformer: SliderValueTransformer {
         self.prefix = prefix
     }
 
-    func transformed(rawValue: CGFloat) -> SliderValue {
+    public func transformed(rawValue: CGFloat) -> SliderValue {
         let rounded = rawValue.roundToNearest(roundingThreshold)
         return SliderValue(raw: rawValue,
                            transformed: rounded,
@@ -50,7 +50,7 @@ class DefaultSliderValueTransformer: SliderValueTransformer {
 
     }
 
-    func string(value: CGFloat) -> String {
+    public func string(value: CGFloat) -> String {
         let strValue = formatter.string(for: value) ?? String(format: "%.0f", value)
         return String(format: "%@%@%@", prefix, strValue, suffix)
     }

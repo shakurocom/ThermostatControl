@@ -6,22 +6,28 @@
 import Foundation
 import UIKit
 
-class CustomSliderView: UIView {
+public class CustomSliderView: UIView {
 
-    enum Orientation {
+    public enum Orientation {
         case vertical
         case horizontal
     }
 
-    var leftRadius: CGFloat = 1.0
-    var rightRadius: CGFloat = 8.0
+    /// Track view's left radius. Default = 1.0
+    public var leftRadius: CGFloat = 1.0
 
-    var minimumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "RedThermostat") {
+    /// Track view's left radius. Default = 8.0
+    public var rightRadius: CGFloat = 8.0
+
+    /// Defines the color of the tracker in the minimum side
+    public var minimumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "RedThermostat") {
         didSet {
             updateColors()
         }
     }
-    var maximumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "DarkThermostat") {
+
+    /// Defines the color of the tracker in the maximum side
+    public var maximumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "DarkThermostat") {
         didSet {
             updateColors()
         }
@@ -30,13 +36,15 @@ class CustomSliderView: UIView {
     // mask shape
     private var cMask = CAShapeLayer()
 
-    var value: Float = 0.0 {
+    /// Slider position value to update gradient layer
+    public var value: Float = 0.0 {
         didSet {
             updateGradientLocations()
         }
     }
 
-    var orientation: Orientation = .horizontal {
+    /// View slider orientation
+    public var orientation: Orientation = .horizontal {
         didSet {
             updateGradientPoints()
             updateMask()
@@ -44,7 +52,7 @@ class CustomSliderView: UIView {
     }
 
     // allows layer to be a CAGradientLayer
-    override class var layerClass: AnyClass {
+    override public class var layerClass: AnyClass {
         return CAGradientLayer.self
     }
 
@@ -73,7 +81,7 @@ class CustomSliderView: UIView {
 
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         updateMask()
     }

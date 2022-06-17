@@ -1,9 +1,9 @@
 import UIKit
 import Shakuro_CommonTypes
 
-class CircleGestureRecognizer: UIPanGestureRecognizer {
+public class CircleGestureRecognizer: UIPanGestureRecognizer {
 
-    // angle in the interval [-pi,+pi] radians
+    /// Angle in the interval [-pi,+pi] radians
     private(set) var angle: CGFloat = 0 {
         didSet {
             previousAngle = oldValue
@@ -11,7 +11,8 @@ class CircleGestureRecognizer: UIPanGestureRecognizer {
     }
     private(set) var previousAngle: CGFloat = 0
 
-    var angularVelocity: CGFloat {
+    /// Determines the speed of the gesture
+    public var angularVelocity: CGFloat {
         guard let actualView = view, let location = touchLocation() else {
             return 0
         }
@@ -21,11 +22,12 @@ class CircleGestureRecognizer: UIPanGestureRecognizer {
         return magnitude / radius // relationship between angular velocity and linear ω=v/r.
     }
 
-    var clockwise: Bool {
+    /// Determine the direction of the gesture
+    public var clockwise: Bool {
         return velocity(in: view).y < 0.0
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
         guard let location = touchLocation() else {
             state = .failed
@@ -36,7 +38,7 @@ class CircleGestureRecognizer: UIPanGestureRecognizer {
         state = .began
     }
 
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with: event)
         guard let location = touchLocation() else {
             state = .failed

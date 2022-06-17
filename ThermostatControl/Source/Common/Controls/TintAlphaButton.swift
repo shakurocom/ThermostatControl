@@ -1,11 +1,14 @@
 import UIKit
 
-class TintAlphaButton: StateAlphaButton {
+public class TintAlphaButton: StateAlphaButton {
 
+    /// Button tint color when pressed
     var selectedTintColor: UIColor?
+
+    /// Normal button tint color
     var normalTintColor: UIColor?
 
-    override var isSelected: Bool {
+    override public var isSelected: Bool {
         didSet {
             if let selectedTint = selectedTintColor, let normalTint = normalTintColor {
                 tintColor = isSelected ? selectedTint : normalTint
