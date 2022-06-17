@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.authors          = {'Vlad Onipchenko' => 'vonipchenko@shakuro.com'}
     s.source           = { :git => 'https://github.com/shakurocom/ThermostatControl.git', :tag => s.version }
-    s.source_files     = 'Thermostat/Source/**/**'
-    s.resource_bundles = {'Thermostat' => ['Thermostat/ThermostatResources/**/*']}
+    s.source_files     = 'ThermostatControl/Source/**/**'
+    s.resource_bundles = {'Thermostat' => ['ThermostatControl/Resources/**/*']}
 
     s.swift_version    = '5.0'
     s.ios.deployment_target = '13.0'
