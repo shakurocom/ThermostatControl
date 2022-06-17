@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6B3C2D0E285B7D420057CA60 /* ThermostatDemo */,
-				60C2430428001D4100D40E59 /* Thermostat */,
+				60C2430428001D4100D40E59 /* ThermostatControl */,
 				60C2430328001D4100D40E59 /* Products */,
 				787A77D6FC4D7FA2BAEE98DF /* Pods */,
 				F6BCC7C61E700A732A427771 /* Frameworks */,
@@ -109,13 +109,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60C2430428001D4100D40E59 /* Thermostat */ = {
+		60C2430428001D4100D40E59 /* ThermostatControl */ = {
 			isa = PBXGroup;
 			children = (
 				6B6778E42859BF4400391D8F /* Source */,
 				6B3C2D0F285B7D740057CA60 /* Resources */,
 			);
-			path = Thermostat;
+			path = ThermostatControl;
 			sourceTree = "<group>";
 		};
 		60C243272800211900D40E59 /* SliderView */ = {
