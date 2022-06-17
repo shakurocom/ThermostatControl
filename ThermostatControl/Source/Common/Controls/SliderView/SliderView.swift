@@ -1,17 +1,17 @@
 import UIKit
 import Lottie
 
-final class SliderView: UIView {
+public final class SliderView: UIView {
 
-    enum ScaleColoring {
+    public enum ScaleColoring {
         case type1 // red-blue-red
         case type2 // red-blue
     }
 
-    var valueChanged: ((_ slider: SliderView) -> Void)?
-    var stickToNearestValue: Bool = false
+    public var valueChanged: ((_ slider: SliderView) -> Void)?
+    public var stickToNearestValue: Bool = false
 
-    var feedbackEnabled: Bool = true {
+    public var feedbackEnabled: Bool = true {
         didSet {
             if !feedbackEnabled {
                 feedbackGenerator = nil
@@ -55,7 +55,7 @@ final class SliderView: UIView {
         setup()
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         updateLayout()
     }
@@ -63,7 +63,7 @@ final class SliderView: UIView {
     /**
      - parameter coloring: type of gradient on scale
      **/
-    func setColoringType(_ coloringType: ScaleColoring) {
+    public func setColoringType(_ coloringType: ScaleColoring) {
         switch coloringType {
         case .type1:
             sliderView.setAnimation(named: "HumidistatSlider")
@@ -80,7 +80,7 @@ final class SliderView: UIView {
      - parameter scaleValues: scale control values, markIsHidden - show or do not show yellow dot near value label
      - parameter selectedValue: currently selected value
      **/
-    func setRanges(_ ranges: [ScaleStepRange],
+    public func setRanges(_ ranges: [ScaleStepRange],
                    valueTransformer: SliderValueTransformer,
                    scaleValues: [(value: CGFloat, markIsHidden: Bool)],
                    selectedValue: CGFloat) {
@@ -111,7 +111,7 @@ final class SliderView: UIView {
     /**
      - parameter value: value from any range of ranges: [ScaleStepRange] see setup func
      **/
-    func setValue(_ newValue: CGFloat) {
+    public func setValue(_ newValue: CGFloat) {
         let newSliderValue = valueTransformer.transformed(rawValue: newValue)
         guard let actualRange = ranges.first(where: { $0.range.contains(newSliderValue.transformed) }) else {
             if !ranges.isEmpty {

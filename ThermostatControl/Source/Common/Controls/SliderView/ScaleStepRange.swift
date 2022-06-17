@@ -1,11 +1,15 @@
 import UIKit
 
-struct ScaleStepRange {
-    let range: ClosedRange<CGFloat> // from 0 to 100
-    let animationProgressRange: ClosedRange<CGFloat> // from 0 to 1
-    let passedSteps: CGFloat
-    let stepsInRange: CGFloat
-    let stepSize: CGFloat
+public struct ScaleStepRange {
+
+    /// From 0 to 100
+    public let range: ClosedRange<CGFloat>
+
+    /// from 0 to 1
+    public let animationProgressRange: ClosedRange<CGFloat>
+    public let passedSteps: CGFloat
+    public let stepsInRange: CGFloat
+    public let stepSize: CGFloat
 
     init(range: ClosedRange<CGFloat>,
          passedSteps: CGFloat,
@@ -28,7 +32,7 @@ struct ScaleStepRange {
         animationProgressRange = lowerBound...upperBound
     }
 
-    func animationProgressFrom(scaleValue: CGFloat) -> CGFloat {
+    public func animationProgressFrom(scaleValue: CGFloat) -> CGFloat {
         return ScaleStepRange.convertToAnimationProgress(scaleValue,
                                                          range: range,
                                                          passedSteps: passedSteps,
@@ -36,7 +40,7 @@ struct ScaleStepRange {
                                                          stepSize: stepSize)
     }
 
-    func scaleValueFrom(progress: CGFloat) -> CGFloat {
+    public func scaleValueFrom(progress: CGFloat) -> CGFloat {
         let rangeScale = 1.0 - (progress - animationProgressRange.lowerBound) / (animationProgressRange.upperBound - animationProgressRange.lowerBound)
         let result = (range.lowerBound + (range.upperBound - range.lowerBound ) * rangeScale)
         return result

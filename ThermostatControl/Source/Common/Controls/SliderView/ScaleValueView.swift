@@ -1,6 +1,6 @@
 import UIKit
 
-final class ScaleValueView: UIView {
+public final class ScaleValueView: UIView {
 
     private enum Constant {
         static let markSize: CGFloat = 4.0
@@ -24,6 +24,10 @@ final class ScaleValueView: UIView {
         setup()
     }
 
+    /// Sets label for scale value view
+    /// - Parameters:
+    ///  - title: - Sets title for view
+    ///  - markIsHidden - Sets mark hidden
     func setTitle(title: String, markIsHidden: Bool) {
         markView.isHidden = markIsHidden
         label.text = title

@@ -1,6 +1,6 @@
 import UIKit
 
-final class CurrentValueIndicatorView: UIView {
+public final class CurrentValueIndicatorView: UIView {
 
     private enum Constant {
         static let labelOffset: CGFloat = 17.0
@@ -21,12 +21,12 @@ final class CurrentValueIndicatorView: UIView {
         setup()
     }
 
-    func setGradientImage(_ image: UIImage?) {
+    public func setGradientImage(_ image: UIImage?) {
         gradient = image
         label.textColor = getColor(progress: lastProgress)
     }
 
-    func setTitle(title: String,
+    public func setTitle(title: String,
                   progress: CGFloat,
                   animated: Bool) {
         lastProgress = progress
