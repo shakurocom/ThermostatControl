@@ -36,7 +36,7 @@ extension HumidistatStylesheet.FontFace {
     func fontWithSize(_ size: CGFloat) -> UIFont {
         guard let actualFont: UIFont = UIFont(name: self.rawValue, size: size) else {
             debugPrint("Can't load fon with name!!! \(self.rawValue)")
-            return UIFont.systemFont(ofSize: size)
+            return UIFont.systemFont(ofSize: size, weight: .bold)
         }
         return actualFont
     }

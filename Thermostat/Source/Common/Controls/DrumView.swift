@@ -83,7 +83,7 @@ private extension DrumView {
         spinnerImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         spinnerImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
-        spinnerImageView.image = UIImage(named: "spinner")
+        spinnerImageView.image = UIImage.loadImageFromBundle(name: "spinner")
         spinnerImageView.layoutIfNeeded()
 
         circleGestureRecognizer = CircleGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))

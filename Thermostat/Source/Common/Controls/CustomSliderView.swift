@@ -16,12 +16,12 @@ class CustomSliderView: UIView {
     var leftRadius: CGFloat = 1.0
     var rightRadius: CGFloat = 8.0
 
-    var minimumTrackColor: UIColor? = UIColor(named: "RedThermostat") {
+    var minimumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "RedThermostat") {
         didSet {
             updateColors()
         }
     }
-    var maximumTrackColor: UIColor? = UIColor(named: "DarkThermostat") {
+    var maximumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "DarkThermostat") {
         didSet {
             updateColors()
         }

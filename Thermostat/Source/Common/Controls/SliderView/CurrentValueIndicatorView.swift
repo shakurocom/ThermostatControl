@@ -7,7 +7,7 @@ final class CurrentValueIndicatorView: UIView {
     }
 
     private let label: UILabel = UILabel()
-    private let bgImageView: UIImageView = UIImageView(image: UIImage(named: "HumidistatShadow"))
+    private let bgImageView: UIImageView = UIImageView(image: UIImage.loadImageFromBundle(name: "HumidistatShadow"))
     private var gradient: UIImage?
     private var lastProgress: CGFloat = 0
 
