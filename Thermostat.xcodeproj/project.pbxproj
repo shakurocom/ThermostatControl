@@ -93,6 +93,7 @@
 		60C242F928001D4100D40E59 = {
 			isa = PBXGroup;
 			children = (
+				6B3C2D0E285B7D420057CA60 /* ThermostatDemo */,
 				60C2430428001D4100D40E59 /* Thermostat */,
 				60C2430328001D4100D40E59 /* Products */,
 				787A77D6FC4D7FA2BAEE98DF /* Pods */,
@@ -112,8 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				6B6778E42859BF4400391D8F /* Source */,
-				6B3C2D0E285B7D420057CA60 /* ThermostatDemo */,
-				6B3C2D0F285B7D740057CA60 /* ThermostatResources */,
+				6B3C2D0F285B7D740057CA60 /* Resources */,
 			);
 			path = Thermostat;
 			sourceTree = "<group>";
@@ -144,14 +144,14 @@
 			path = ThermostatDemo;
 			sourceTree = "<group>";
 		};
-		6B3C2D0F285B7D740057CA60 /* ThermostatResources */ = {
+		6B3C2D0F285B7D740057CA60 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */,
 				6BE0DA352858C04000091C76 /* ThermostatViewController.xib */,
 				6B6778F02859C6CC00391D8F /* Fonts */,
 			);
-			path = ThermostatResources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6B6778E32859BE7300391D8F /* Resources */ = {
@@ -356,11 +356,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/Thermostat/R.generated.swift,
+				$SRCROOT/ThermostatDemo/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Thermostat/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ThermostatDemo/R.generated.swift\"\n";
 		};
 		FF196A664C9F74AED1E82D0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -555,7 +555,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thermostat/ThermostatDemo/Resources/Info.plist;
+				INFOPLIST_FILE = ThermostatDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -584,7 +584,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Thermostat/ThermostatDemo/Resources/Info.plist;
+				INFOPLIST_FILE = ThermostatDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
