@@ -10,16 +10,13 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.authors          = {'Vlad Onipchenko' => 'vonipchenko@shakuro.com'}
     s.source           = { :git => 'https://github.com/shakurocom/ThermostatControl.git', :tag => s.version }
-    s.source_files     = 'Thermostat/UI/**/*'
-    s.resource_bundles = {
-    'Assets' => ['Thermostat/Resources/ThermostatAssets.*/**/*'],
-    'Xib' => ['Thermostat/Resources/UI/ThermostatViewController.xib']
-    }
+    s.source_files     = 'Thermostat/Source/**/**'
+    s.resource_bundles = {'Thermostat' => ['Thermostat/ThermostatResources/**/*']}
 
     s.swift_version    = '5.0'
     s.ios.deployment_target = '13.0'
 
-    s.dependency 'Shakuro.CommonTypes', '1.1.0'
-    s.dependency 'lottie-ios', '2.5.2'
+    s.dependency 'Shakuro.CommonTypes', '~>1.1.0'
+    s.dependency 'lottie-ios', '~>2.5.2'
 
 end
