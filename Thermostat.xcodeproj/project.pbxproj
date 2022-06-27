@@ -180,10 +180,10 @@
 			children = (
 				60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */,
 				60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */,
+				6B91336B2869993C00A98894 /* FontsLoader.swift */,
 				60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */,
 				6B6778E72859C01800391D8F /* Controls */,
 				6B6778E62859BFAD00391D8F /* Extensions */,
-				6B91336B2869993C00A98894 /* FontsLoader.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
