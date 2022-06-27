@@ -33,6 +33,9 @@ private extension UIFont {
 
 public class FontsLoader {
 
+    /**
+     Downloads the necessary fonts for demo from the pod build.
+     */
     public static func loadFonts() {
         let fonts: [(name: String, fontExtension: String)] = [(name: "Montserrat-Bold", fontExtension: "ttf")]
         let bundle: Bundle
