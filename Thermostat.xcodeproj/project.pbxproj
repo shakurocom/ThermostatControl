@@ -36,6 +36,7 @@
 		6B91336C2869993C00A98894 /* FontsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B91336B2869993C00A98894 /* FontsLoader.swift */; };
 		6B951426285C666A0007C10E /* UIColor+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B951425285C666A0007C10E /* UIColor+Bundle.swift */; };
 		6B951428285C66740007C10E /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B951427285C66740007C10E /* UIImage+Bundle.swift */; };
+		6BA4842E286F1EA90030B418 /* Bundle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4842D286F1EA90030B418 /* Bundle+Helper.swift */; };
 		6BE0DA362858C04000091C76 /* ThermostatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE0DA352858C04000091C76 /* ThermostatViewController.xib */; };
 		810E408C7310AD677C035CAA /* Pods_Thermostat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77775C584E40D79E668D84EB /* Pods_Thermostat.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		6B91336B2869993C00A98894 /* FontsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsLoader.swift; sourceTree = "<group>"; };
 		6B951425285C666A0007C10E /* UIColor+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Bundle.swift"; sourceTree = "<group>"; };
 		6B951427285C66740007C10E /* UIImage+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
+		6BA4842D286F1EA90030B418 /* Bundle+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Helper.swift"; sourceTree = "<group>"; };
 		6BE0DA352858C04000091C76 /* ThermostatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThermostatViewController.xib; sourceTree = "<group>"; };
 		77775C584E40D79E668D84EB /* Pods_Thermostat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thermostat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 		6B6778E62859BFAD00391D8F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6BA4842D286F1EA90030B418 /* Bundle+Helper.swift */,
 				60C24341280033A300D40E59 /* CGPoint+Distance.swift */,
 				6B951425285C666A0007C10E /* UIColor+Bundle.swift */,
 				6B951427285C66740007C10E /* UIImage+Bundle.swift */,
@@ -403,6 +406,7 @@
 				60C243442800358800D40E59 /* R.generated.swift in Sources */,
 				6B951426285C666A0007C10E /* UIColor+Bundle.swift in Sources */,
 				60C2430628001D4100D40E59 /* AppDelegate.swift in Sources */,
+				6BA4842E286F1EA90030B418 /* Bundle+Helper.swift in Sources */,
 				60C24340280030BC00D40E59 /* StateAlphaButton.swift in Sources */,
 				60C2433E28002F4D00D40E59 /* HumidistatStylesheet.swift in Sources */,
 				60C2433D28002F4C00D40E59 /* TintAlphaButton.swift in Sources */,
