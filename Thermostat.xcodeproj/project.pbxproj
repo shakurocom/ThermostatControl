@@ -12,7 +12,6 @@
 		60C2430F28001D4500D40E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C2430E28001D4500D40E59 /* Assets.xcassets */; };
 		60C2431228001D4500D40E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C2431028001D4500D40E59 /* LaunchScreen.storyboard */; };
 		60C2432028001E5300D40E59 /* ThermostatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431928001E5200D40E59 /* ThermostatViewController.swift */; };
-		60C2432128001E5300D40E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C2431A28001E5200D40E59 /* Main.storyboard */; };
 		60C2432228001E5300D40E59 /* DecelerationBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */; };
 		60C2432328001E5300D40E59 /* DrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431C28001E5200D40E59 /* DrumView.swift */; };
 		60C2432428001E5300D40E59 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431D28001E5200D40E59 /* CustomSliderView.swift */; };
@@ -51,7 +50,6 @@
 		60C2431128001D4500D40E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60C2431328001D4500D40E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60C2431928001E5200D40E59 /* ThermostatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermostatViewController.swift; sourceTree = "<group>"; };
-		60C2431A28001E5200D40E59 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecelerationBehaviour.swift; sourceTree = "<group>"; };
 		60C2431C28001E5200D40E59 /* DrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumView.swift; sourceTree = "<group>"; };
 		60C2431D28001E5200D40E59 /* CustomSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
@@ -95,8 +93,8 @@
 		60C242F928001D4100D40E59 = {
 			isa = PBXGroup;
 			children = (
-				6B3C2D0E285B7D420057CA60 /* ThermostatDemo */,
 				60C2430428001D4100D40E59 /* ThermostatControl */,
+				6B3C2D0E285B7D420057CA60 /* ThermostatDemo */,
 				60C2430328001D4100D40E59 /* Products */,
 				787A77D6FC4D7FA2BAEE98DF /* Pods */,
 				F6BCC7C61E700A732A427771 /* Frameworks */,
@@ -222,7 +220,6 @@
 		6B6778EC2859C4A100391D8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				60C2431A28001E5200D40E59 /* Main.storyboard */,
 				60C2431028001D4500D40E59 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
@@ -320,7 +317,6 @@
 				6B6778EB2859C25300391D8F /* ThermostatAssets.xcassets in Resources */,
 				6BE0DA362858C04000091C76 /* ThermostatViewController.xib in Resources */,
 				60C2430F28001D4500D40E59 /* Assets.xcassets in Resources */,
-				60C2432128001E5300D40E59 /* Main.storyboard in Resources */,
 				6B6778F12859C71C00391D8F /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,7 +558,6 @@
 				INFOPLIST_FILE = ThermostatDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -592,7 +587,6 @@
 				INFOPLIST_FILE = ThermostatDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
