@@ -3,7 +3,7 @@ use_frameworks!
 
 #ToolboxCommit = 'b3053718eb54fb8e5f39d5a1b54f8b0f82577f44'
 
-target 'ThermostatControl' do
+target 'Thermostat' do
 
   pod 'R.swift', '5.2.2'
   pod 'lottie-ios', '2.5.2'

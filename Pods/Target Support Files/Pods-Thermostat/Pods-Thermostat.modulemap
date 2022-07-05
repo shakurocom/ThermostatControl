@@ -1,0 +1,6 @@
+framework module Pods_Thermostat {
+  umbrella header "Pods-Thermostat-umbrella.h"
+
+  export *
+  module * { export * }
+}
