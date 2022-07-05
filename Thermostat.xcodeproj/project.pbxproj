@@ -14,14 +14,10 @@
 		60C2432028001E5300D40E59 /* ThermostatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431928001E5200D40E59 /* ThermostatViewController.swift */; };
 		60C2432228001E5300D40E59 /* DecelerationBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */; };
 		60C2432328001E5300D40E59 /* DrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431C28001E5200D40E59 /* DrumView.swift */; };
-		60C2432428001E5300D40E59 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431D28001E5200D40E59 /* CustomSliderView.swift */; };
+		60C2432428001E5300D40E59 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431D28001E5200D40E59 /* SliderView.swift */; };
 		60C2432528001E5300D40E59 /* CircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */; };
 		60C2432628001E5300D40E59 /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2431F28001E5300D40E59 /* UIView+Rotate.swift */; };
-		60C243302800211900D40E59 /* ScaleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C243282800211900D40E59 /* ScaleValueView.swift */; };
 		60C243312800211900D40E59 /* CGFloat+RoundToNearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C243292800211900D40E59 /* CGFloat+RoundToNearest.swift */; };
-		60C243322800211900D40E59 /* ScaleStepRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432A2800211900D40E59 /* ScaleStepRange.swift */; };
-		60C243332800211900D40E59 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432B2800211900D40E59 /* SliderView.swift */; };
-		60C243342800211900D40E59 /* CurrentValueIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432C2800211900D40E59 /* CurrentValueIndicatorView.swift */; };
 		60C243352800211900D40E59 /* DefaultSliderValueTransformer+FactoryMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432D2800211900D40E59 /* DefaultSliderValueTransformer+FactoryMethods.swift */; };
 		60C243362800211900D40E59 /* SliderValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432E2800211900D40E59 /* SliderValueTransformer.swift */; };
 		60C243372800211900D40E59 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432F2800211900D40E59 /* TemperatureUnit.swift */; };
@@ -53,14 +49,10 @@
 		60C2431928001E5200D40E59 /* ThermostatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThermostatViewController.swift; sourceTree = "<group>"; };
 		60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecelerationBehaviour.swift; sourceTree = "<group>"; };
 		60C2431C28001E5200D40E59 /* DrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumView.swift; sourceTree = "<group>"; };
-		60C2431D28001E5200D40E59 /* CustomSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
+		60C2431D28001E5200D40E59 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGestureRecognizer.swift; sourceTree = "<group>"; };
 		60C2431F28001E5300D40E59 /* UIView+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
-		60C243282800211900D40E59 /* ScaleValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleValueView.swift; sourceTree = "<group>"; };
 		60C243292800211900D40E59 /* CGFloat+RoundToNearest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+RoundToNearest.swift"; sourceTree = "<group>"; };
-		60C2432A2800211900D40E59 /* ScaleStepRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleStepRange.swift; sourceTree = "<group>"; };
-		60C2432B2800211900D40E59 /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
-		60C2432C2800211900D40E59 /* CurrentValueIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentValueIndicatorView.swift; sourceTree = "<group>"; };
 		60C2432D2800211900D40E59 /* DefaultSliderValueTransformer+FactoryMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultSliderValueTransformer+FactoryMethods.swift"; sourceTree = "<group>"; };
 		60C2432E2800211900D40E59 /* SliderValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderValueTransformer.swift; sourceTree = "<group>"; };
 		60C2432F2800211900D40E59 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
@@ -123,13 +115,9 @@
 		60C243272800211900D40E59 /* SliderView */ = {
 			isa = PBXGroup;
 			children = (
-				60C243282800211900D40E59 /* ScaleValueView.swift */,
-				60C243292800211900D40E59 /* CGFloat+RoundToNearest.swift */,
-				60C2432A2800211900D40E59 /* ScaleStepRange.swift */,
-				60C2432B2800211900D40E59 /* SliderView.swift */,
-				60C2432C2800211900D40E59 /* CurrentValueIndicatorView.swift */,
 				60C2432D2800211900D40E59 /* DefaultSliderValueTransformer+FactoryMethods.swift */,
 				60C2432E2800211900D40E59 /* SliderValueTransformer.swift */,
+				60C2431D28001E5200D40E59 /* SliderView.swift */,
 				60C2432F2800211900D40E59 /* TemperatureUnit.swift */,
 			);
 			path = SliderView;
@@ -192,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA4842D286F1EA90030B418 /* Bundle+Helper.swift */,
+				60C243292800211900D40E59 /* CGFloat+RoundToNearest.swift */,
 				60C24341280033A300D40E59 /* CGPoint+Distance.swift */,
 				6B951425285C666A0007C10E /* UIColor+Bundle.swift */,
 				6B951427285C66740007C10E /* UIImage+Bundle.swift */,
@@ -203,7 +192,6 @@
 		6B6778E72859C01800391D8F /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				60C2431D28001E5200D40E59 /* CustomSliderView.swift */,
 				60C2431C28001E5200D40E59 /* DrumView.swift */,
 				60C2433F280030BC00D40E59 /* StateAlphaButton.swift */,
 				60C2433B28002F4C00D40E59 /* TintAlphaButton.swift */,
@@ -394,15 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C24342280033A300D40E59 /* CGPoint+Distance.swift in Sources */,
-				60C2432428001E5300D40E59 /* CustomSliderView.swift in Sources */,
-				60C243332800211900D40E59 /* SliderView.swift in Sources */,
+				60C2432428001E5300D40E59 /* SliderView.swift in Sources */,
 				6B951428285C66740007C10E /* UIImage+Bundle.swift in Sources */,
 				60C2432628001E5300D40E59 /* UIView+Rotate.swift in Sources */,
 				6B91336C2869993C00A98894 /* FontsLoader.swift in Sources */,
 				60C2432528001E5300D40E59 /* CircleGestureRecognizer.swift in Sources */,
 				60C2432228001E5300D40E59 /* DecelerationBehaviour.swift in Sources */,
 				60C243352800211900D40E59 /* DefaultSliderValueTransformer+FactoryMethods.swift in Sources */,
-				60C243342800211900D40E59 /* CurrentValueIndicatorView.swift in Sources */,
 				60C243442800358800D40E59 /* R.generated.swift in Sources */,
 				6B951426285C666A0007C10E /* UIColor+Bundle.swift in Sources */,
 				60C2430628001D4100D40E59 /* AppDelegate.swift in Sources */,
@@ -413,11 +399,9 @@
 				60C2430828001D4100D40E59 /* SceneDelegate.swift in Sources */,
 				60C243362800211900D40E59 /* SliderValueTransformer.swift in Sources */,
 				60C2432328001E5300D40E59 /* DrumView.swift in Sources */,
-				60C243322800211900D40E59 /* ScaleStepRange.swift in Sources */,
 				60C243372800211900D40E59 /* TemperatureUnit.swift in Sources */,
 				60C2432028001E5300D40E59 /* ThermostatViewController.swift in Sources */,
 				60C243312800211900D40E59 /* CGFloat+RoundToNearest.swift in Sources */,
-				60C243302800211900D40E59 /* ScaleValueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@ public class ThermostatViewController: UIViewController {
     @IBOutlet private var wateringButton: TintAlphaButton!
     @IBOutlet private var coolingButton: TintAlphaButton!
 
-    @IBOutlet private var customSliderView: CustomSliderView!
+    @IBOutlet private var customSliderView: SliderView!
     @IBOutlet private var theSlider: UISlider!
     @IBOutlet private var coolerImage: UIImageView!
 
