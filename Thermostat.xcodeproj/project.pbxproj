@@ -22,10 +22,10 @@
 		60C243362800211900D40E59 /* SliderValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432E2800211900D40E59 /* SliderValueTransformer.swift */; };
 		60C243372800211900D40E59 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2432F2800211900D40E59 /* TemperatureUnit.swift */; };
 		60C2433D28002F4C00D40E59 /* TintAlphaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2433B28002F4C00D40E59 /* TintAlphaButton.swift */; };
-		60C2433E28002F4D00D40E59 /* HumidistatStylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */; };
 		60C24340280030BC00D40E59 /* StateAlphaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2433F280030BC00D40E59 /* StateAlphaButton.swift */; };
 		60C24342280033A300D40E59 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C24341280033A300D40E59 /* CGPoint+Distance.swift */; };
 		60C243442800358800D40E59 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C243432800358800D40E59 /* R.generated.swift */; };
+		6B4B8C9C287482D7008ED71A /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B8C9B287482D7008ED71A /* Stylesheet.swift */; };
 		6B6778EB2859C25300391D8F /* ThermostatAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */; };
 		6B6778EF2859C6AB00391D8F /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B6778EE2859C6AB00391D8F /* OFL.txt */; };
 		6B6778F12859C71C00391D8F /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B6778ED2859C6A000391D8F /* Montserrat-Bold.ttf */; };
@@ -57,10 +57,10 @@
 		60C2432E2800211900D40E59 /* SliderValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderValueTransformer.swift; sourceTree = "<group>"; };
 		60C2432F2800211900D40E59 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		60C2433B28002F4C00D40E59 /* TintAlphaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintAlphaButton.swift; sourceTree = "<group>"; };
-		60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumidistatStylesheet.swift; sourceTree = "<group>"; };
 		60C2433F280030BC00D40E59 /* StateAlphaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateAlphaButton.swift; sourceTree = "<group>"; };
 		60C24341280033A300D40E59 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		60C243432800358800D40E59 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6B4B8C9B287482D7008ED71A /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		6B6778EA2859C25300391D8F /* ThermostatAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ThermostatAssets.xcassets; sourceTree = "<group>"; };
 		6B6778ED2859C6A000391D8F /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		6B6778EE2859C6AB00391D8F /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				60C2431E28001E5200D40E59 /* CircleGestureRecognizer.swift */,
 				60C2431B28001E5200D40E59 /* DecelerationBehaviour.swift */,
 				6B91336B2869993C00A98894 /* FontsLoader.swift */,
-				60C2433C28002F4C00D40E59 /* HumidistatStylesheet.swift */,
+				6B4B8C9B287482D7008ED71A /* Stylesheet.swift */,
 				6B6778E72859C01800391D8F /* Controls */,
 				6B6778E62859BFAD00391D8F /* Extensions */,
 			);
@@ -392,9 +392,9 @@
 				60C243442800358800D40E59 /* R.generated.swift in Sources */,
 				6B951426285C666A0007C10E /* UIColor+Bundle.swift in Sources */,
 				60C2430628001D4100D40E59 /* AppDelegate.swift in Sources */,
+				6B4B8C9C287482D7008ED71A /* Stylesheet.swift in Sources */,
 				6BA4842E286F1EA90030B418 /* Bundle+Helper.swift in Sources */,
 				60C24340280030BC00D40E59 /* StateAlphaButton.swift in Sources */,
-				60C2433E28002F4D00D40E59 /* HumidistatStylesheet.swift in Sources */,
 				60C2433D28002F4C00D40E59 /* TintAlphaButton.swift in Sources */,
 				60C2430828001D4100D40E59 /* SceneDelegate.swift in Sources */,
 				60C243362800211900D40E59 /* SliderValueTransformer.swift in Sources */,

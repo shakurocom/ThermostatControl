@@ -110,18 +110,6 @@ public class ThermostatViewController: UIViewController {
             guard let actualSelf = self else {
                 return
             }
-            // TODO: handle value changes
-            // let unit = actualSelf.currentUnit
-          /*  switch unit {
-            case .fahrenheit:
-                let fahrenheit = slider.value
-                // let celsius = unit.convertValue(fahrenheit, toUnit: .celsius)
-//                debugPrint("fahrenheit slider value changed: fahrenheit \(fahrenheit) celsius \(celsius)")
-            case .celsius:
-                let celsius = slider.value
-                // let fahrenheit = unit.convertValue(celsius, toUnit: .fahrenheit)
-//                debugPrint("celsius slider value changed: celsius \(celsius) fahrenheit \(fahrenheit)")
-            }*/
             actualSelf.temperatureValueLabel.text = actualSelf.drumView.value.string
         }
 
@@ -180,7 +168,7 @@ public class ThermostatViewController: UIViewController {
         }
         drumView.setValueTransformer(valueTransformer, selectedValue: selectedValue, maxValue: maxUnitValue, minValue: minUnitValue)
         temperatureValueLabel.text = drumView.valueTransformer.transformed(rawValue: selectedValue).string
-        temperatureValueLabel.font = HumidistatStylesheet.FontFace.montserratBold.fontWithSize(fontSize)
+        temperatureValueLabel.font = Stylesheet.FontFace.montserratBold.fontWithSize(fontSize)
     }
 
     // MARK: - Actions
