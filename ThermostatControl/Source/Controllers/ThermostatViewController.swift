@@ -73,9 +73,9 @@ public class ThermostatViewController: UIViewController {
         powerPressGestureRecognizer.minimumPressDuration = TimeInterval.ulpOfOne
         powerPressGestureRecognizer.addTarget(self, action: #selector(handlePowerPress(_:)))
 
-        let selectedImage: UIImage? = UIImage.loadImageFromBundle(name: "buttonSelected")
-        let normalImage: UIImage? = UIImage.loadImageFromBundle(name: "normalButton")
-        let normalTint = UIColor.loadColorFromBundle(name: "DarkThermostat")
+        let selectedImage: UIImage? = ThermostatBundleHelper.loadImage(named: "buttonSelected")
+        let normalImage: UIImage? = ThermostatBundleHelper.loadImage(named: "normalButton")
+        let normalTint = ThermostatBundleHelper.loadColor(named: "DarkThermostat")
         let selectedTint = UIColor.white
         [heatingButton, wateringButton, coolingButton].forEach { (button: TintAlphaButton) in
             button.isExclusiveTouch = true
@@ -92,9 +92,9 @@ public class ThermostatViewController: UIViewController {
             button.selectedTintColor = selectedTint
             button.normalTintColor = normalTint
         }
-        heatingButton.setImage(UIImage.loadImageFromBundle(name: "sun"), for: .normal)
-        wateringButton.setImage(UIImage.loadImageFromBundle(name: "water"), for: .normal)
-        coolingButton.setImage(UIImage.loadImageFromBundle(name: "snow"), for: .normal)
+        heatingButton.setImage(ThermostatBundleHelper.loadImage(named: "sun"), for: .normal)
+        wateringButton.setImage(ThermostatBundleHelper.loadImage(named: "water"), for: .normal)
+        coolingButton.setImage(ThermostatBundleHelper.loadImage(named: "snow"), for: .normal)
 
         // TODO: Initital value
         let selectedValue: CGFloat
