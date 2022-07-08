@@ -42,6 +42,12 @@ public class ThermostatViewController: UIViewController {
     @IBOutlet private var theSlider: UISlider!
     @IBOutlet private var coolerImage: UIImageView!
 
+    public static func loadFromNib() -> ThermostatViewController {
+        ThermostatBundleHelper.loadFont(name: "Montserrat-Bold", fontExtension: "ttf")
+        let viewController = ThermostatViewController(nibName: "ThermostatViewController", bundle: ThermostatBundleHelper.bundle)
+        return viewController
+    }
+
     private(set) var currentUnit: TemperatureUnit = .fahrenheit
 
     private var currentTemperatureInfo: TemperatureInfo?

@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ThermostatViewController(nibName: "ThermostatViewController", bundle: nil)
+        let viewController = ThermostatViewController.loadFromNib()
         window.rootViewController = viewController
         window.makeKeyAndVisible()
         self.window = window
