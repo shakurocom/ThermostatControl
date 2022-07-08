@@ -36,8 +36,8 @@ class ThermostatBundleHelper {
     private static func findThermostatBundle() -> Bundle {
         let thermostatBundle = Bundle(for: ThermostatViewController.self)
         if let thermostatBundleURL = thermostatBundle.url(forResource: "Thermostat", withExtension: "bundle"),
-           let findedThermostatBundle = Bundle(url: thermostatBundleURL) {
-            return findedThermostatBundle
+           let bundleThermostatBundle = Bundle(url: thermostatBundleURL) {
+            return bundleThermostatBundle
         } else {
             return thermostatBundle
         }
