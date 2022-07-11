@@ -22,7 +22,24 @@ final class ThermostatBundleHelper {
     /// - parameter name: font name.
     /// - parameter extension: font extensions.
     static func registerFont(name: String, fontExtension: String) {
-        _ = UIFont.registerFont(fontName: name, fontExtension: fontExtension, bundle: bundle)
+        guard let fontURL = bundle.url(forResource: name, withExtension: fontExtension) else {
+            debugPrint("Couldn't find font \(name)")
+            return
+        }
+        guard let fontDataProvider = CGDataProvider(url: fontURL as CFURL) else {
+            debugPrint("Couldn't load data from the font \(name)")
+            return
+        }
+        guard let font = CGFont(fontDataProvider) else {
+            debugPrint("Couldn't create font(\(name)) from data")
+            return
+        }
+        var error: Unmanaged<CFError>?
+        let success = CTFontManagerRegisterGraphicsFont(font, &error)
+        guard success else {
+            debugPrint("Error registering font(\(name)): maybe it was already registered.")
+            return
+        }
     }
 
     /// Registers the specified fonts from the bundle.

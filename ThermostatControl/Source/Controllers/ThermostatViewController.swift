@@ -43,6 +43,7 @@ public class ThermostatViewController: UIViewController {
     @IBOutlet private var coolerImage: UIImageView!
 
     public static func loadFromNib() -> ThermostatViewController {
+        ThermostatBundleHelper.registerFont(name: "Montserrat-Bold", fontExtension: "ttf")
         let viewController = ThermostatViewController(nibName: "ThermostatViewController", bundle: ThermostatBundleHelper.bundle)
         return viewController
     }
