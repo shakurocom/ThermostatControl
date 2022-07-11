@@ -21,4 +21,5 @@ extension DefaultSliderValueTransformer {
                                              minimumFractionDigits: 0,
                                              maximumFractionDigits: 0)
     }
+
 }
