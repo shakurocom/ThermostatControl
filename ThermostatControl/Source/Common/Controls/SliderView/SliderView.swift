@@ -20,14 +20,14 @@ public class SliderView: UIView {
     public var rightRadius: CGFloat = 8.0
 
     /// Defines the color of the tracker in the minimum side
-    public var minimumTrackColor: UIColor? = ThermostatBundleHelper.readColor(named: "RedThermostat") {
+    public var minimumTrackColor: UIColor? = Stylesheet.Color.redThermostat {
         didSet {
             updateColors()
         }
     }
 
     /// Defines the color of the tracker in the maximum side
-    public var maximumTrackColor: UIColor? = ThermostatBundleHelper.readColor(named: "DarkThermostat") {
+    public var maximumTrackColor: UIColor? = Stylesheet.Color.darkThermostat {
         didSet {
             updateColors()
         }

@@ -55,10 +55,4 @@ final class ThermostatBundleHelper {
         return UIImage(named: named, in: bundle, compatibleWith: nil)
     }
 
-    /// Reads a color with the specified name from the bundle.
-    /// - parameter named: color name.
-    static func readColor(named: String) -> UIColor? {
-        return UIColor(named: named, in: bundle, compatibleWith: nil)
-    }
-
 }

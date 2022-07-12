@@ -2,6 +2,13 @@ import UIKit
 
 public enum Stylesheet {
 
+    // MARK: - Colors
+
+    public enum Color {
+        public static let darkThermostat: UIColor = UIColor(red: 95.0/255.0, green: 95.0/255.0, blue: 95.0/255.0, alpha: 1.0) // #5F5F5F
+        public static let redThermostat: UIColor = UIColor(red: 237.0/255.0, green: 33.0/255.0, blue: 91.0/255.0, alpha: 1.0) // #EC205B
+    }
+
     // MARK: - Fonts
 
     public enum FontFace: String {

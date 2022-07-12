@@ -81,7 +81,7 @@ public class ThermostatViewController: UIViewController {
 
         let selectedImage: UIImage? = ThermostatBundleHelper.readImage(named: "buttonSelected")
         let normalImage: UIImage? = ThermostatBundleHelper.readImage(named: "normalButton")
-        let normalTint = ThermostatBundleHelper.readColor(named: "DarkThermostat")
+        let normalTint = Stylesheet.Color.darkThermostat
         let selectedTint = UIColor.white
         [heatingButton, wateringButton, coolingButton].forEach { (button: TintAlphaButton) in
             button.isExclusiveTouch = true
