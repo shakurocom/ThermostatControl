@@ -94,7 +94,7 @@ private extension DrumView {
         spinnerImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         spinnerImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
-        spinnerImageView.image = ThermostatBundleHelper.readImage(named: "spinner")
+        spinnerImageView.image = ThermostatBundleHelper.image(named: "spinner")
         spinnerImageView.layoutIfNeeded()
 
         circleGestureRecognizer = CircleGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))

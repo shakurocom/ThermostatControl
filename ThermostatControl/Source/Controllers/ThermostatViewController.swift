@@ -43,9 +43,7 @@ public class ThermostatViewController: UIViewController {
     @IBOutlet private var coolerImage: UIImageView!
 
     public static func loadFromNib() -> ThermostatViewController {
-        ThermostatBundleHelper.registerFont(name: "Montserrat-Bold", fontExtension: "ttf")
-        let viewController = ThermostatViewController(nibName: "ThermostatViewController", bundle: ThermostatBundleHelper.bundle)
-        return viewController
+        return ThermostatBundleHelper.instantiateViewController(targetClass: ThermostatViewController.self, nibName: "ThermostatViewController")
     }
 
     private(set) var currentUnit: TemperatureUnit = .fahrenheit
@@ -79,8 +77,8 @@ public class ThermostatViewController: UIViewController {
         powerPressGestureRecognizer.minimumPressDuration = TimeInterval.ulpOfOne
         powerPressGestureRecognizer.addTarget(self, action: #selector(handlePowerPress(_:)))
 
-        let selectedImage: UIImage? = ThermostatBundleHelper.readImage(named: "buttonSelected")
-        let normalImage: UIImage? = ThermostatBundleHelper.readImage(named: "normalButton")
+        let selectedImage: UIImage? = ThermostatBundleHelper.image(named: "buttonSelected")
+        let normalImage: UIImage? = ThermostatBundleHelper.image(named: "normalButton")
         let normalTint = Stylesheet.Color.darkThermostat
         let selectedTint = UIColor.white
         [heatingButton, wateringButton, coolingButton].forEach { (button: TintAlphaButton) in
@@ -98,9 +96,9 @@ public class ThermostatViewController: UIViewController {
             button.selectedTintColor = selectedTint
             button.normalTintColor = normalTint
         }
-        heatingButton.setImage(ThermostatBundleHelper.readImage(named: "sun"), for: .normal)
-        wateringButton.setImage(ThermostatBundleHelper.readImage(named: "water"), for: .normal)
-        coolingButton.setImage(ThermostatBundleHelper.readImage(named: "snow"), for: .normal)
+        heatingButton.setImage(ThermostatBundleHelper.image(named: "sun"), for: .normal)
+        wateringButton.setImage(ThermostatBundleHelper.image(named: "water"), for: .normal)
+        coolingButton.setImage(ThermostatBundleHelper.image(named: "snow"), for: .normal)
 
         // TODO: Initital value
         let selectedValue: CGFloat
