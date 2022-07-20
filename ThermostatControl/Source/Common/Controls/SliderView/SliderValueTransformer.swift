@@ -54,4 +54,5 @@ public class DefaultSliderValueTransformer: SliderValueTransformer {
         let strValue = formatter.string(for: value) ?? String(format: "%.0f", value)
         return String(format: "%@%@%@", prefix, strValue, suffix)
     }
+
 }

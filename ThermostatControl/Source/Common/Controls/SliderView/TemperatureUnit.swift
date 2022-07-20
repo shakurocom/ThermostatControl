@@ -1,6 +1,7 @@
 import UIKit
 
 enum TemperatureUnit {
+
     enum Constant {
         static let celsiusToFahrenheitScale: CGFloat = 9.0 / 5.0
         static let freezingPointOffset: CGFloat = 32
@@ -32,4 +33,5 @@ enum TemperatureUnit {
         }
         return convertedValue
     }
+
 }

@@ -2,10 +2,10 @@ import UIKit
 
 public class TintAlphaButton: StateAlphaButton {
 
-    /// Button tint color when pressed
+    /// Button tint color when pressed.
     var selectedTintColor: UIColor?
 
-    /// Normal button tint color
+    /// Normal button tint color.
     var normalTintColor: UIColor?
 
     override public var isSelected: Bool {

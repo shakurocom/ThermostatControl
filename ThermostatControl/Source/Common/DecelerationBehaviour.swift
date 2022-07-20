@@ -10,7 +10,7 @@ import UIKit
 
 public final class DecelerationBehaviour {
 
-    /// Indicates the minimum speed before stopping
+    /// Indicates the minimum speed before stopping.
     public var minVelocity: CGFloat = 0
 
     /// Determines the deceleration factor. 0...1. 1 - will never stop.
@@ -37,7 +37,7 @@ public final class DecelerationBehaviour {
         startTimer()
     }
 
-    /// Used to stop animation
+    /// Used to stop animation.
     public func stop() {
         update = nil
         stopTimer()

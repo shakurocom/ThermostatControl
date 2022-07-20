@@ -124,13 +124,11 @@ private extension SliderView {
             gradientLayer?.endPoint = CGPoint(x: 1.0, y: 0.5)
         }
         CATransaction.commit()
-
     }
 
     private func updateMask() {
         let bez = UIBezierPath()
         switch orientation {
-
         case .vertical:
             // define the "Rounded Wedge" shape
             let topCenter = CGPoint(x: bounds.midX, y: bounds.minY + leftRadius)
@@ -149,7 +147,6 @@ private extension SliderView {
             bez.close()
         }
         cMask.path = bez.cgPath
-
     }
 
 }

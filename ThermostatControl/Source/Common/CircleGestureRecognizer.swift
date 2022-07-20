@@ -11,7 +11,7 @@ public class CircleGestureRecognizer: UIPanGestureRecognizer {
     }
     private(set) var previousAngle: CGFloat = 0
 
-    /// Determines the speed of the gesture
+    /// Returns a value specifying the angular velocity of the gesture.
     public var angularVelocity: CGFloat {
         guard let actualView = view, let location = touchLocation() else {
             return 0
@@ -22,7 +22,7 @@ public class CircleGestureRecognizer: UIPanGestureRecognizer {
         return magnitude / radius // relationship between angular velocity and linear ω=v/r.
     }
 
-    /// Determine the direction of the gesture
+    /// Returns a boolean value specifying the direction of the gesture.
     public var clockwise: Bool {
         return velocity(in: view).y < 0.0
     }
