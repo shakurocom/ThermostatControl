@@ -52,6 +52,7 @@ public class CircleGestureRecognizer: UIPanGestureRecognizer {
             break
         }
     }
+
 }
 
 // MARK: - Private
@@ -70,4 +71,5 @@ private extension CircleGestureRecognizer {
     func angleBetweenXAsisForPoint(point: CGPoint) -> CGFloat {
         return atan2(point.y, point.x)
     }
+
 }

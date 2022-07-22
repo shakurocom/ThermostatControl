@@ -127,26 +127,26 @@ private extension SliderView {
     }
 
     private func updateMask() {
-        let bez = UIBezierPath()
+        let bezierPath = UIBezierPath()
         switch orientation {
         case .vertical:
             // define the "Rounded Wedge" shape
             let topCenter = CGPoint(x: bounds.midX, y: bounds.minY + leftRadius)
             let bottomCenter = CGPoint(x: bounds.midX, y: bounds.maxY - rightRadius)
 
-            bez.addArc(withCenter: topCenter, radius: leftRadius, startAngle: .pi, endAngle: .pi * 2, clockwise: true)
-            bez.addArc(withCenter: bottomCenter, radius: rightRadius, startAngle: .pi * 2, endAngle: .pi, clockwise: true)
-            bez.close()
+            bezierPath.addArc(withCenter: topCenter, radius: leftRadius, startAngle: .pi, endAngle: .pi * 2, clockwise: true)
+            bezierPath.addArc(withCenter: bottomCenter, radius: rightRadius, startAngle: .pi * 2, endAngle: .pi, clockwise: true)
+            bezierPath.close()
         case .horizontal:
             // define the "Rounded Wedge" shape
             let leftCenter = CGPoint(x: bounds.minX + leftRadius, y: bounds.midY)
             let rightCenter = CGPoint(x: bounds.maxX - rightRadius, y: bounds.midY)
 
-            bez.addArc(withCenter: leftCenter, radius: leftRadius, startAngle: .pi * 0.5, endAngle: .pi * 1.5, clockwise: true)
-            bez.addArc(withCenter: rightCenter, radius: rightRadius, startAngle: .pi * 1.5, endAngle: .pi * 0.5, clockwise: true)
-            bez.close()
+            bezierPath.addArc(withCenter: leftCenter, radius: leftRadius, startAngle: .pi * 0.5, endAngle: .pi * 1.5, clockwise: true)
+            bezierPath.addArc(withCenter: rightCenter, radius: rightRadius, startAngle: .pi * 1.5, endAngle: .pi * 0.5, clockwise: true)
+            bezierPath.close()
         }
-        cMask.path = bez.cgPath
+        cMask.path = bezierPath.cgPath
     }
 
 }
