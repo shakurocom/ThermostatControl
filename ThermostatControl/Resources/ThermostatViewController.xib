@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThermostatViewController" customModule="Thermostat" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="cGU-0i-oEN" id="Vdf-bc-cJD"/>
+                <outlet property="coolerImage" destination="1KX-fI-qW2" id="ih7-K0-ucC"/>
+                <outlet property="coolingButton" destination="3TO-ga-zUB" id="8Zj-rh-k3c"/>
+                <outlet property="customSliderView" destination="4gI-h3-8g7" id="byx-hf-FFw"/>
+                <outlet property="drumView" destination="ago-BE-dwn" id="4hB-P1-bG1"/>
+                <outlet property="heatingButton" destination="HVV-DW-sOa" id="rdQ-EQ-Zxs"/>
+                <outlet property="powerContainerView" destination="IXS-wm-oh7" id="UPP-33-jPR"/>
+                <outlet property="powerLabel" destination="0Mi-zQ-YNq" id="z9c-Rk-npR"/>
+                <outlet property="sheduleTitleLabel" destination="Jj6-kC-zlh" id="pz0-ym-gm1"/>
+                <outlet property="temperatureTitleLabel" destination="sbM-Pf-ccZ" id="aJ1-xk-lMj"/>
+                <outlet property="temperatureUnitTitleLabel" destination="KqG-f9-3vJ" id="lyL-rm-blG"/>
+                <outlet property="temperatureValueLabel" destination="3xI-Wb-zJK" id="nYd-qQ-oBX"/>
+                <outlet property="theSlider" destination="gMO-Or-GOf" id="Dk3-jl-7Fd"/>
+                <outlet property="view" destination="He6-jz-Juq" id="eJH-iN-KU6"/>
+                <outlet property="wateringButton" destination="Qs9-xV-ojH" id="9wt-HC-aFc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="He6-jz-Juq">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGU-0i-oEN" userLabel="Container">
+                    <rect key="frame" x="-3.5" y="0.0" width="435" height="926"/>
+                    <subviews>
+                        <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-Xt-fCC">
+                            <rect key="frame" x="20" y="55" width="51" height="31"/>
+                            <connections>
+                                <action selector="unitSwitchValueChanged:" destination="-1" eventType="valueChanged" id="zAB-en-egA"/>
+                            </connections>
+                        </switch>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-4W-9sm" userLabel="TemperatureView">
+                            <rect key="frame" x="32" y="224" width="180" height="135.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="temperature, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-Pf-ccZ" userLabel="Temperature Title Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="96" height="19"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" red="0.92156862750000001" green="0.96862745100000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqG-f9-3vJ" userLabel="Temperature Unit Title Label">
+                                    <rect key="frame" x="96" y="0.0" width="16" height="19"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" red="0.92156862750000001" green="0.96862745100000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="72" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="3xI-Wb-zJK" userLabel="Temperature Value Label">
+                                    <rect key="frame" x="0.0" y="19" width="180" height="116.5"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="100"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="3xI-Wb-zJK" firstAttribute="leading" secondItem="BLd-4W-9sm" secondAttribute="leading" id="3wC-eN-8kX"/>
+                                <constraint firstItem="sbM-Pf-ccZ" firstAttribute="leading" secondItem="BLd-4W-9sm" secondAttribute="leading" id="5i6-yM-Tdx"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KqG-f9-3vJ" secondAttribute="trailing" id="9TU-lz-ejz"/>
+                                <constraint firstItem="sbM-Pf-ccZ" firstAttribute="top" secondItem="BLd-4W-9sm" secondAttribute="top" id="Ghh-R1-Cnz"/>
+                                <constraint firstItem="3xI-Wb-zJK" firstAttribute="top" secondItem="sbM-Pf-ccZ" secondAttribute="bottom" id="eJ5-p6-vaE"/>
+                                <constraint firstAttribute="width" constant="180" id="fJp-O1-uQh"/>
+                                <constraint firstAttribute="trailing" secondItem="3xI-Wb-zJK" secondAttribute="trailing" id="hOk-4D-VTd"/>
+                                <constraint firstAttribute="bottom" secondItem="3xI-Wb-zJK" secondAttribute="bottom" id="l5k-PE-U7y"/>
+                                <constraint firstItem="KqG-f9-3vJ" firstAttribute="centerY" secondItem="sbM-Pf-ccZ" secondAttribute="centerY" id="oPE-X3-6Mk"/>
+                                <constraint firstItem="KqG-f9-3vJ" firstAttribute="leading" secondItem="sbM-Pf-ccZ" secondAttribute="trailing" id="zPJ-UW-1BV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="253" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ago-BE-dwn" userLabel="TapAreaView" customClass="DrumView" customModule="Thermostat" customModuleProvider="target">
+                            <rect key="frame" x="235" y="-108" width="860" height="860"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="900" constant="860" id="17x-WO-IwX"/>
+                                <constraint firstAttribute="height" priority="500" constant="860" id="I1p-vi-QGe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOb-mv-haL">
+                            <rect key="frame" x="32" y="434.5" width="188" height="21"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-KH-t3w">
+                                    <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set smart schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-kC-zlh" userLabel="Schedule Title">
+                                    <rect key="frame" x="33" y="0.0" width="147" height="21"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.92941176469999998" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="O6e-KH-t3w" firstAttribute="top" secondItem="pOb-mv-haL" secondAttribute="top" id="IsU-mY-bpA"/>
+                                <constraint firstAttribute="trailing" secondItem="Jj6-kC-zlh" secondAttribute="trailing" constant="8" id="ZdX-VY-ZaO"/>
+                                <constraint firstItem="O6e-KH-t3w" firstAttribute="leading" secondItem="pOb-mv-haL" secondAttribute="leading" id="dZd-zK-kcv"/>
+                                <constraint firstItem="Jj6-kC-zlh" firstAttribute="top" secondItem="pOb-mv-haL" secondAttribute="top" id="eqK-9e-jbF"/>
+                                <constraint firstItem="Jj6-kC-zlh" firstAttribute="leading" secondItem="O6e-KH-t3w" secondAttribute="trailing" constant="12" id="rH9-0m-lJe"/>
+                                <constraint firstAttribute="bottom" secondItem="O6e-KH-t3w" secondAttribute="bottom" id="vNp-K1-HJ1"/>
+                                <constraint firstAttribute="bottom" secondItem="Jj6-kC-zlh" secondAttribute="bottom" id="yDG-FW-JTm"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-lm-4ad">
+                            <rect key="frame" x="32" y="487.5" width="176" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-DW-sOa" userLabel="sun" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <color key="backgroundColor" red="0.92941176469999998" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="66v-96-TIx"/>
+                                        <constraint firstAttribute="height" constant="48" id="kE7-5H-54T"/>
+                                    </constraints>
+                                    <state key="normal" image="sun"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="x7i-C8-IQ2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs9-xV-ojH" userLabel="water" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
+                                    <rect key="frame" x="64" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="IFq-ho-6jT"/>
+                                        <constraint firstAttribute="width" constant="48" id="nc3-KY-WjY"/>
+                                    </constraints>
+                                    <state key="normal" image="water"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="qr1-jk-ibq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TO-ga-zUB" userLabel="snow" customClass="TintAlphaButton" customModule="Thermostat" customModuleProvider="target">
+                                    <rect key="frame" x="128" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="aT4-66-JIP"/>
+                                        <constraint firstAttribute="height" constant="48" id="jzE-Lz-4wo"/>
+                                    </constraints>
+                                    <state key="normal" image="snow"/>
+                                    <connections>
+                                        <action selector="modeButtonPressed:" destination="-1" eventType="touchUpInside" id="Fjz-Zb-0R7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="HVV-DW-sOa" secondAttribute="bottom" id="5Qx-qh-3NW"/>
+                                <constraint firstItem="HVV-DW-sOa" firstAttribute="top" secondItem="ckZ-lm-4ad" secondAttribute="top" id="8Vx-z5-yyN"/>
+                                <constraint firstItem="Qs9-xV-ojH" firstAttribute="leading" secondItem="HVV-DW-sOa" secondAttribute="trailing" constant="16" id="Abb-nd-e2L"/>
+                                <constraint firstItem="HVV-DW-sOa" firstAttribute="leading" secondItem="ckZ-lm-4ad" secondAttribute="leading" id="CDh-e4-g7y"/>
+                                <constraint firstItem="Qs9-xV-ojH" firstAttribute="centerY" secondItem="HVV-DW-sOa" secondAttribute="centerY" id="UY3-IY-oW3"/>
+                                <constraint firstItem="Qs9-xV-ojH" firstAttribute="top" secondItem="ckZ-lm-4ad" secondAttribute="top" id="Vx9-7n-YHp"/>
+                                <constraint firstItem="3TO-ga-zUB" firstAttribute="leading" secondItem="Qs9-xV-ojH" secondAttribute="trailing" constant="16" id="Z27-br-RoL"/>
+                                <constraint firstAttribute="bottom" secondItem="Qs9-xV-ojH" secondAttribute="bottom" id="kQu-cd-JSH"/>
+                                <constraint firstAttribute="height" constant="48" id="o9F-eq-MkL"/>
+                                <constraint firstAttribute="trailing" secondItem="3TO-ga-zUB" secondAttribute="trailing" id="rV0-YN-JhC"/>
+                                <constraint firstItem="3TO-ga-zUB" firstAttribute="centerY" secondItem="HVV-DW-sOa" secondAttribute="centerY" id="uGc-9t-xAc"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooler" translatesAutoresizingMaskIntoConstraints="NO" id="1KX-fI-qW2">
+                            <rect key="frame" x="32" y="567.5" width="16" height="16"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-h3-8g7" customClass="SliderView" customModule="Thermostat" customModuleProvider="target">
+                            <rect key="frame" x="64" y="560.5" width="339" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="UxK-PS-mBM"/>
+                            </constraints>
+                        </view>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gMO-Or-GOf" userLabel="The Slider">
+                            <rect key="frame" x="54" y="560.5" width="359" height="31"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </slider>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-wm-oh7" userLabel="Power Container View">
+                            <rect key="frame" x="131" y="630.5" width="173" height="24"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power" translatesAutoresizingMaskIntoConstraints="NO" id="duY-1i-Whl">
+                                    <rect key="frame" x="0.0" y="0.0" width="22" height="24"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold to turn AC off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-zQ-YNq" userLabel="Power Label">
+                                    <rect key="frame" x="30" y="0.0" width="143" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="duY-1i-Whl" firstAttribute="top" secondItem="IXS-wm-oh7" secondAttribute="top" id="Aro-e5-Zfe"/>
+                                <constraint firstItem="0Mi-zQ-YNq" firstAttribute="leading" secondItem="duY-1i-Whl" secondAttribute="trailing" constant="8" id="Djv-aI-YCd"/>
+                                <constraint firstAttribute="trailing" secondItem="0Mi-zQ-YNq" secondAttribute="trailing" id="Sgr-PD-uuI"/>
+                                <constraint firstItem="0Mi-zQ-YNq" firstAttribute="top" secondItem="IXS-wm-oh7" secondAttribute="top" id="VnR-Zs-UsU"/>
+                                <constraint firstAttribute="bottom" secondItem="duY-1i-Whl" secondAttribute="bottom" id="a9T-fC-Lcf"/>
+                                <constraint firstAttribute="bottom" secondItem="0Mi-zQ-YNq" secondAttribute="bottom" id="mrf-Rv-S8m"/>
+                                <constraint firstItem="duY-1i-Whl" firstAttribute="leading" secondItem="IXS-wm-oh7" secondAttribute="leading" id="pU2-fS-dTa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="pOb-mv-haL" firstAttribute="top" secondItem="BLd-4W-9sm" secondAttribute="bottom" constant="75" id="4QL-na-iFM"/>
+                        <constraint firstItem="4gI-h3-8g7" firstAttribute="leading" secondItem="1KX-fI-qW2" secondAttribute="trailing" constant="16" id="5v3-0U-1pc"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IXS-wm-oh7" secondAttribute="trailing" constant="32" id="8ka-Tn-971"/>
+                        <constraint firstAttribute="height" constant="926" id="CYT-Ct-ESk"/>
+                        <constraint firstItem="ago-BE-dwn" firstAttribute="centerY" secondItem="BLd-4W-9sm" secondAttribute="centerY" constant="30" id="Cm5-bK-tLA"/>
+                        <constraint firstItem="IXS-wm-oh7" firstAttribute="top" secondItem="4gI-h3-8g7" secondAttribute="bottom" constant="40" id="EAW-dy-xOg"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IXS-wm-oh7" secondAttribute="bottom" constant="20" id="H4q-U9-ybx"/>
+                        <constraint firstItem="gMO-Or-GOf" firstAttribute="width" secondItem="4gI-h3-8g7" secondAttribute="width" constant="16" id="MMn-WN-Joy"/>
+                        <constraint firstAttribute="trailing" secondItem="4gI-h3-8g7" secondAttribute="trailing" constant="32" id="TVw-1k-Cu6"/>
+                        <constraint firstItem="4gI-h3-8g7" firstAttribute="height" secondItem="gMO-Or-GOf" secondAttribute="height" id="UVk-PC-LhE"/>
+                        <constraint firstItem="BLd-4W-9sm" firstAttribute="leading" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="32" id="XZa-Nn-tYp"/>
+                        <constraint firstItem="pOb-mv-haL" firstAttribute="leading" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="32" id="Yff-cP-mil"/>
+                        <constraint firstItem="IXS-wm-oh7" firstAttribute="centerX" secondItem="cGU-0i-oEN" secondAttribute="centerX" id="a3P-us-SX9"/>
+                        <constraint firstItem="ago-BE-dwn" firstAttribute="trailing" secondItem="cGU-0i-oEN" secondAttribute="trailing" constant="660" id="ajM-Xk-sq5"/>
+                        <constraint firstItem="1KX-fI-qW2" firstAttribute="leading" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="32" id="arr-sI-Anr"/>
+                        <constraint firstItem="gMO-Or-GOf" firstAttribute="centerY" secondItem="4gI-h3-8g7" secondAttribute="centerY" id="bWr-wS-LcG"/>
+                        <constraint firstItem="ckZ-lm-4ad" firstAttribute="leading" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="32" id="btM-9x-b1e"/>
+                        <constraint firstItem="ckZ-lm-4ad" firstAttribute="top" secondItem="pOb-mv-haL" secondAttribute="bottom" constant="32" id="dFs-YB-e6n"/>
+                        <constraint firstAttribute="width" constant="435" id="gfL-DJ-Jw7"/>
+                        <constraint firstItem="BeO-Xt-fCC" firstAttribute="top" secondItem="cGU-0i-oEN" secondAttribute="top" constant="55" id="ltl-sJ-Yu2"/>
+                        <constraint firstItem="BeO-Xt-fCC" firstAttribute="leading" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="20" id="s2X-S4-vG3"/>
+                        <constraint firstItem="1KX-fI-qW2" firstAttribute="top" secondItem="ckZ-lm-4ad" secondAttribute="bottom" constant="32" id="v4S-CY-NwR"/>
+                        <constraint firstItem="BLd-4W-9sm" firstAttribute="top" secondItem="cGU-0i-oEN" secondAttribute="top" constant="224" id="wme-OR-tka"/>
+                        <constraint firstItem="IXS-wm-oh7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cGU-0i-oEN" secondAttribute="leading" constant="32" id="xVD-Ga-Nlv"/>
+                        <constraint firstItem="4gI-h3-8g7" firstAttribute="centerY" secondItem="1KX-fI-qW2" secondAttribute="centerY" id="xWe-xF-Skh"/>
+                        <constraint firstItem="gMO-Or-GOf" firstAttribute="centerX" secondItem="4gI-h3-8g7" secondAttribute="centerX" id="xYt-4E-PLb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="m8M-iQ-TEA"/>
+            <color key="backgroundColor" red="0.015686274510000001" green="0.039215686270000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cGU-0i-oEN" firstAttribute="centerY" secondItem="He6-jz-Juq" secondAttribute="centerY" id="9Fr-U7-FgE"/>
+                <constraint firstItem="cGU-0i-oEN" firstAttribute="centerX" secondItem="He6-jz-Juq" secondAttribute="centerX" id="Cbt-dg-REs"/>
+            </constraints>
+            <point key="canvasLocation" x="152.803738317757" y="170.41036717062636"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clock" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="cooler" width="16" height="16"/>
+        <image name="power" width="22" height="24"/>
+        <image name="snow" width="16" height="16"/>
+        <image name="sun" width="16" height="16"/>
+        <image name="water" width="11.333333015441895" height="16"/>
+    </resources>
+</document>
