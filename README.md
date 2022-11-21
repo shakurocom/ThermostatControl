@@ -10,7 +10,9 @@ Thermostat is a Swift component designed to control the temperature with a simpl
 - [Installation](#installation)
 - [License](#license)
 
-Thermostat allows the user to increase or decrease the temperature by swiping the scale up or down. Moreover, one can adjust additional parameters like fan speed and air conditioner mode, turn it on or off, and set a timer. 
+Thermostat allows the user to increase or decrease the temperature by swiping the scale up or down. Moreover, one can adjust additional parameters like fan speed and air conditioner mode, turn it on or off, and set a timer.
+
+![](Resources/thermostat-control.gif)
 
 Here’s an example of the Thermostat animation:
 
